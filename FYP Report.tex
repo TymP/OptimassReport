@@ -1,0 +1,140 @@
+\documentclass{report}
+\author{Tym Pakulski\\Department of Mechanical Engineering, University of Bath\\\\ Supervised by Dr. Roger Ngwompo\\Assessed by Dr. Martin Ansell}
+\title{Experimental Assessment of a Krohne Optimass 6400 Mass Flow Meter for Determining CO$_2$ Vapour Quality}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{gensymb}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage[toc,page]{appendix}
+\usepackage{subcaption}                                            
+\usepackage{titlesec}   
+\usepackage{titling}
+\usepackage{acronym}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{wrapfig}
+\restylefloat{figure}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\Large#1\end{center}
+    \vskip0.5em}%
+}                                           
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge}
+
+\subtitle{Final Year Project Report}
+%GUIDELINES: up to 100000 words, intro llit reveiew mehtods results discussion conclusions future work. Margins: 30mm LHS, 10mm RHS, 25 mm top and bottom
+\begin{document}
+\graphicspath{{figures/}}
+%\includepdf[pages={1}]{docs/coverSheet.pdf}
+\maketitle
+\begin{abstract}
+\pagenumbering{roman}
+\end{abstract}
+\section*{Acronyms}
+\begin{acronym}
+\acro{CERN}{The European Oranization for Nuclear Research} 
+\acro{Nikhef}{National Institute for Subatomic Physics, Amserdam, Netherlands}
+\acro{HEP}{High-Energy Physics}
+\acro{CMS}{Compact Muon Solenoid - a CERN experiment} 
+\acro{LHC}{Large Hadron Collider}
+\acro{2PACL}{Two-phase accumulator control loop}
+\acro{LS1}{Long Shutdown One} 
+\acro{CFCs}{Chlorofluorocarbons} 
+\acrodef{Tracker}[SC]{Type of particle detector that tracks the paths of charged particles.} 
+\acro{TIF}{Tracker Integration Facility}
+\acro{PH-DT}{CERN Physics Department, Detector Technologies Group}
+\acro{EGM}{Entrained Gas Management}
+\acro{DAQ}{Data Acquisition}
+\end{acronym}
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+
+\chapter{Literature Review}
+\chapter{Methods}
+\section{Experiment}
+\section{Analysis}
+\chapter{Results}
+\chapter{Discussion}
+\chapter{Conclusions}
+\chapter{Future Work}
+
+\begin{thebibliography}{9}
+\bibitem{TIF PoS}
+P. Tropea \textit{et al.} "Design, construction and commissioning of a 15 kW CO$_2$ evaporative cooling system for particle physics detectors: lessons learnt and perspectives for further development" \textit{Proceedings of Science}, 2014, Paper no. 223
+
+\bibitem{jerome} 
+J. Daguin \textit{et al.} "Evaporative $CO_2$ Cooling System for the Upgrade of the CMS Pixel Detector at CERN", \textit{10th IIR Gustav Lorentzen Conference on Natural Refrigerants}, 2012, Paper no. 188.
+%Krohne http://optimass6400.krohne.com/#introduction
+
+\bibitem{krohne online}
+Krohne Group. "Optimass 6400" Internet: \underline{http://optimass6400.krohne.com/\#\_introduction}, [Feb. 18, 2015]
+
+\bibitem{krohne brochure}
+Krohne Group. "Optimass 6400." Brochure. Apr 2013
+
+\bibitem{thome 1}
+L. Cheng, G. Ribatski, J. M. Quib$\acute{e}$n, J R. Thome. "New prediction methods for CO$_2$ evaporation inside tubes: Part I - A two-phase flow pattern map and a flow pattern based phenomenological model for two-phase flow frictional pressure drops." \textit{International Journal of Heat and Mass Transfer} vol. 51, pp. 111-124, 2008
+
+\bibitem{bart}
+B. Verlaat. "Controlling a 2-phase CO2 loop using a 2-phase accumulator." \textit{International Conference of Refrigeration}, 2007, Beijing, China, ICR07-B2-1565 
+
+\bibitem{bart2}
+A.P. Colijn, B. Verlaat. "Evaporative CO$_2$ Heat Transfer Measurements for Cooling Systems of Partical Physics Detectors." \textit{7$^{
+th}$ International Conference on Heat Transfer, Fluid Mechanics and Thermodynamics}, 2010, Antalaya, Turkey, HEFAT2010 
+
+\bibitem{mishra}
+B. Mishra. "CO$_2$ based two phase cooling test set up for CMS trackers: Comparison of experiments with theoretical models." \textit{CERN CMS Collaboration}
+
+\bibitem{CO2 PoS}
+B. Verlaat. "CO2 Cooling Developments for HEP Detectors." \textit{Proceedings of Science}, 2009
+
+\bibitem{emerson youtube}
+Emerson Electric Co. Video File: "Demonstration: Coriolis Flowmeter excels with Two-Phase Flow (entrained gas)." Retrieved from \underline{https://www.youtube.com/watch?v=AjtdNxDOeoo}, Jan. 17, 2013, [Mar. 15, 2015]
+
+\bibitem{bath}
+M. P. Ansell. "Instructions for ME30227: Engineering project - BEng Academic Year 2014/15." \textit{University of Bath}, 2015
+
+\bibitem{tif web}
+P. Tropea. "The CMS PIX Phase I upgrade CO2 cooling: a full scale prototype ready for tests." Internet: \underline{http://ph-news.web.cern.ch/content/cms-pix-phase-i-upgrade-co2-cooling-full-scale-prototype-ready-tests}, Dec. 13, 2013 [Mar. 14, 2015] 
+
+\bibitem{emerson EGM}
+D. Wehrs, A. Klosinski. "Entrained Gas Diagnostic with Intelligent Differential Pressure Transmitter." White Paper: \textit{Emerson Process Management}, Jan. 2008, p. 1
+
+\bibitem{processArticle}
+K. Parker. "Bent-tube Coriolis flowmeter slated for entrained gas, high-temp applications." \textit{Processing Magazine} (Jul. 1, 2013)
+
+\bibitem{CERN courier}
+B. Verlaat, "CO2 cooling is getting hot in high-energy physics." \textit{CERN Courier} (May 31, 2012)
+
+\bibitem{augyrond}
+L. Augyrond \textit{et al.} "Void Fraction Measurement in Two-Phse Helium Flow with Electron Energy Attenuation Detector." \textit{Cryogenic Engineering Conference}, Jul. 2001, Madison, WI, USA C-09B-02
+
+\bibitem{zhao}
+Y. Zhao, Q. Bi, R. Hu. "Recognition and measurement in theflow pattern and void fraction of gas-liquid two-phase flow in vertical upward pipes using the gamma densitometer." Applied Thermal Engineering 60 (2013) 398e41
+
+\bibitem{x-ray}
+D. Bauer, H. Chaves, and C. Arcoumanis. "Measurements of void fraction distribution in cavitating pipe flow
+using x-ray CT." Measurement Science and Technology, Issue 23, 2012
+
+\bibitem{bsc}
+M. Beker. "Capacitive measurement technique for void fraction measurements in two phase pipe flow." BSc Project, Delft University of Science and Technology, Delft, the Netherlands, Jul. 2005
+
+\bibitem{lecture}
+J. M. Doster, "Flow Regime Mapping, Void-Quality Relations and Pressure Drop in Two Phase Flow." Lecture Notes. Nuclear Engineering Department, North Carolina State University 
+
+\bibitem{jean}
+B. R. Jean. "A Microwave Sensor for Steam Quality." IEEE Transaction on Instrumentation and Measurement, Aug. 2007
+
+\bibitem{dorfman}
+A. Dorfman, E. Fridman. "Vapor quality measurement by a discharging calorimeter." Fluid Phase Equilibria, 244 (2006) 46–51
+
+
+\end{thebibliography}
+
+\appendix
+\end{document}
