@@ -1,0 +1,30 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{COTEXT Cooling at CERN}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{2-Phase Accumulator Controlled Loop}{section.1.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Vapour Quality and 2-Phase Density}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{The Krohne Optimass 6400}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.4}{Aims, Objectives and Documentation}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Vapour Quality in CO2 Cooling}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Flow Behaviour of 2-Phase CO2}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Determining Vapour Quality}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Coriolis Flow Meters Performance in 2-Phase}{chapter.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Methods}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Experimental Methods}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{Apparatus}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{Control and Data Acquisition}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.3}{Variables and Assumptions}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.4}{Test Protocol}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Data Analysis Methods}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Export Pre-Processing}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Data Processing and Visualisation}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{Calculation of Reference Conditions}{section.3.2}% 21
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 22
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 23
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 24
+\BOOKMARK [0][-]{chapter.7}{Future Work}{}% 25
+\BOOKMARK [0][-]{appendix.A}{The TIF Cooling System}{}% 26
+\BOOKMARK [0][-]{appendix.B}{Krohne Calibration and Sizing Documents}{}% 27
+\BOOKMARK [0][-]{appendix.C}{Dummy Load Heater Module Mechanical Design}{}% 28
+\BOOKMARK [0][-]{appendix.D}{MATLAB Code}{}% 29
+\BOOKMARK [0][-]{appendix.E}{Raw Data}{}% 30
