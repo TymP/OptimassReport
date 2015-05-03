@@ -145,15 +145,28 @@ This study is an initial evaluation of the Optimass 6400's steady-state measurem
 \item{Investigate the physical phenomena behind any performance trends.}
 \item{Identify areas for further research.}
 \end{itemize}
-This report documents the background to the problem and relevant literature, describes the method employed to test and analyse the sensor's performance in \ref{methods}, and the results of the testing in \ref{results}. Further, it documents speculation as to the cause of performance trends revealed in \ref{results} and identifies areas for further research in \ref{further research}.
+This report documents the background to the problem and relevant literature in Chapter \ref{litReview}, describes the method employed to test and analyse the sensor's performance in Chapter \ref{methods}, and the results of the testing in Chapter \ref{results}. Further, it documents speculation as to the cause of performance trends revealed in Chapter \ref{results} and identifies areas for further research in Chapter \ref{further research}.
 
 
-\chapter{Literature Review}
-\section{Behaviour of 2-Phase CO$_2$}
-%Flow mapping
-%dry out and HTCs
-%reduced pressure
+\chapter{Literature Review} \label{litReview}
+\section{Behaviour of 2-Phase CO$_2$} \label{behaviour}
+As a coolant, CO$_2$ is new and different from conventional refrigerants, and its characteristics are generally difficult to predict. Research so far has characterized its performance in terms of heat transfer coefficients in convection and boiling, pressure drops and flow pattern. These phenomena are characterised with respect to vapour quality, because this convenient parameter takes into account mass flow rate and heat flux, simplifying data visualisation. A recent statistical review presented by Mastrullo et al. updated existing data sets with new experimental data, improving the characterisation of this coolant. \cite{Mastrullo 2010}\\
+The most relevant data to this study concerns flow patterns. As a flowing coolant evaporates, it transitions through various physical configurations, some of which are summarised in \ref{fig:flowPatterns}. These flow patterns are influenced by the vapour quality of the fluid, the mass flux - a function of mass flow rate and pipe geometry, and the presence of swirl or turbulence.
 
+\begin{figure}
+\includegraphics[width=\textwidth]{flowPatterns}
+\caption{A summary of liquid-vapour flow patterns. \cite{MIT}}
+\label{fig:flowPatterns}
+\end{figure}
+
+Cheng et al. published a widely-cited flow pattern map based on a the previous Cheng-Ribatski-Wojtan-Thome relations. \cite{Cheng 2008}. The map, shown in Figure \ref{fig:chengMap}, is valid for tube diameters between 0.6 and 10 mm, and mass velocities between 50 and 1500 kgm$^{-2}$s$^{-1}$, making it relevant to the present study.\\
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{chengMap}
+\caption{The updated flow pattern map for CO$_2$ developed by Cheng et al. \cite{Cheng 2008}}
+\label{fig:chengMap}
+\end{figure}
+While the boundaries between flow regimes are frequently updated with new data, the general pattern of CO$_2$ cooling performance as it evaporates has remained consistent. A broad spectrum of literature summarised in a review by Mastrullo et al. \cite{Mastrullo 2010} observes the flow transitioning from single-phase to some form of intermittent flow, then to a broad region of annular flow, then finally to dry out, where it exhibits a dramatic decrease in HTC and thus in cooling efficiency. If the coolant continues to be heated, it reaches mist flow, and its cooling performance continues to plummet. 
+%reduced pressure if it becomes relevant
 \section{Determining Vapour Quality}
 Literature on direct measurement of vapour quality is scarce, especially for CO$_2$. B.R. Jean presented a steam quality sensor that employs microwaves, yielding an accuracy of 2.8\%. \cite{Jean 2007}. The operating principle relied on the dielectric properties of water. A review of steam quality measurement approaches conducted by Dorman and Fridman \cite{Dorfman 2006} evaluated calorimeter, chemical tracer and flow seperation methods, revealing their significant drawbacks. The authors then presented a new theoretical method for measuring vapour fraction, but it was limited to fluid in a static container. \\
 Void fraction, defined as the volumetric fraction of fluid in the vapour phase, is an intuitive candidate for an inderect measurement of vapour quality. 
@@ -164,34 +177,33 @@ Indeed, several methods have been developed for the measurement of void fraction
 \begin{eqnarray}
 X =\phi\frac{\rho_{vapour}}{\rho_{fluid}}
 \end{eqnarray}
-Emperical relations have been developed, most notably by Zuber and Findaly, between void fraction and vapour quality, but their complexity and limited range makes them impractical for a real-time application.\cite{lecture}.
-
+Empirical relations have been developed, most notably by Zuber and Findaly, between void fraction and vapour quality, but their complexity and limited range makes them impractical for a real-time application.\cite{lecture}.\\
+As mentioned in Section \ref{behaviour}, vapour quality is a common parameter across combinations of mass and heat flux, and it is therefore favoured by researchers in the characterisation of CO$_2$. Research of flow patterns, heat transfer coefficients and 2-phase pressure drops employs vapour quality as a key variable for the visiualisation of data. \cite{Cheng 2008}\cite{Mastrullo 2009a}.\\
+Because the direct measurement of vapour quality is not practical, these researchers have relied on analytically determining vapour quality from test conditions. Most have evaluated the enthalpy of the fluid in a sub-cooled liquid state, before applying a measured heat load. Given the heat load and the mass flow rate, they are able to calculate the corresponding change in enthalpy, giving the 2-phase enthalpy and therefore the vapour quality. \cite{Mastrullo 2009c} \cite{Wu 2011} \cite{Yun 2005} Details of this approach are given in \ref{methods}.
 %analytical methods
-\section{Measuring 2-Phase Density}
-\section{Coriolis Flow Meters' Performance in 2-Phase}
-Coriolis flow meters induce a phase shift in the forced oscillations of two bent tubes using the Coriolis principle. As the tubes vibrate at their natural frequency, the velocity of the flow as it is directed radially toward and away from the axis of oscillation in the bent sections induces a phase shift varying linearly with the mass flow rate of the fluid through the instrument. \cite{O'Banion 2013} A schematic of the principle is given in figure \ref{fig:coriolis}. \\
+\section{2-Phase Performance of Coriolis Flow Meters}
+Coriolis flow meters work by inducing a phase shift in the forced oscillations of two bent tubes using the Coriolis principle. A schematic of the principle is given in figure \ref{fig:coriolis}. As the tubes vibrate at their natural frequency, the velocity of the flow as it is directed radially toward and away from the axis of oscillation in the bent sections induces a phase shift varying linearly with the mass flow rate of the fluid through the instrument. \cite{ISO}\cite{O'Banion 2013}  \\
 \begin{figure}
 \includegraphics[width=0.6\textwidth]{coriolis}
-\caption{The working principle of coriolis flow meters. \cite{coriolis}}%find this reference
+\caption{The working principle of coriolis flow meters.}%find this reference
 \label{fig:coriolis}
 \end{figure}
-Density, when independently measured in coriolis flow meters, is typically determined from the resonant frequency of the bent tubes. \cite{O'Banion 2013} The frequency is a function of the tube stiffness and mass. So any change in mass reflects a change in density of the fluid insisde the tube. The sensor corrects for temperature effects on stiffness and, with a known tube volume, determines the density.\\
-Both of these measurement principles can be severely disrupted by 2-phase flow. Entrained gas may create slip planes between the phases, which cause unpredictable forces and vibrations.\cite{ISO}\cite{processArticle} This leads to two problems in instrumentation: first, the unexpected vibrations disturb sensitive electronics. Second, the slip between the phases dampens forced vibrations, possibly stopping the sensor from reading altogether. In a typical coriolis flow meter, the first symptom of entrained gas is the drive gain, the power required to force the tubes' oscillation, rising to 100\%. \cite{ISO}\cite{emerson youtube}\\
-Some manufacturers of process instrumentation have developed products to detect entrained gas. The Emerson Rosemount 3051S Pressure Transmitter, for example, employs statistical methods to detect characteristic frequencies of entrained gas.\ref{emerson EGM}\\
+
+Density, when independently measured in coriolis flow meters, is typically determined from the resonant frequency of the bent tubes. \cite{ISO}\cite{O'Banion 2013} The frequency is a function of the tube stiffness and mass. So any change in mass reflects a change in density of the fluid inside the tube. The sensor corrects for temperature effects on stiffness and, with a known tube volume, determines the density. \cite{ISO}\\
+Both of these measurement principles can be severely disrupted by 2-phase flow. Entrained gas may create slip planes between the phases, which cause unpredictable forces and vibrations.\cite{ISO}\cite{processArticle}\cite{emerson2Phase} This leads to two problems in instrumentation: first, the unexpected vibrations disturb sensitive electronics. Second, the slip between the phases dampens forced vibrations, possibly stopping the sensor from reading altogether. In a typical coriolis flow meter, the first symptom of entrained gas is the drive gain, the power required to force the tubes' oscillation, rising to 100\%. \cite{ISO}\cite{emerson youtube}\\
+Some manufacturers of process instrumentation have developed products to detect entrained gas. The Emerson Rosemount 3051S Pressure Transmitter, for example, employs statistical methods to detect characteristic frequencies of entrained gas. \cite{emerson EGM}\\
 %2-phase flow meter performance lit review
+Because both the mass and density measurements in coriolis flow meters rely on macroscopic properties of the fluid - flow velocity and aggregate density, intermittent flow intuitively seems the most problematic for these instruments. It can be imagined that a sudden pulse of high-velocity gas between normal liquid phases could seriously disrupt sensitive electronics. Indeed, the ISO standard for coriolis meters indicates that they can be used without problems in pure gas-phase flow as well as in homogeneous 2-phase mixtures - an annular flow pattern, for example. \cite{ISO} The obscure industrial research on this topic confirms this trend with many manufacturers stating that annular flow patterns can be measured accurately. \cite{emerson2Phase}\\
+What makes the Optimass 6400 unique is its Entrained Gas Management technology. The meter itself is a copy of the older Optimass 6000, but innovations in the MFC 400 signal converter that it interfaces with set it apart. These electronics employ advanced signal processing and a completely digital drive signal to allow the instrument to continue measuring in 2-phase flow. \cite{krohne brochure}\cite{processArticle}\\
 
 
 
-
-The Optimass 6400 is a physical copy of the older Otpimass 6000. But what makes it unique is the MFC400 electronics chip that it interfaces with. These electronics deliver Entrained Gas Management. A typical flow meter cannot handle 2-phase flow because the slip planes between the liquid and vapour phases damp the oscillations, causing the instrument to stop reading. Entrained Gas Management employs advanced signal processing and a completely digital drive signal to allow the instrument to continue measuring in 2-phase flow. \cite{krohne brochure}\cite{processArticle}\\
-
-
-
-\chapter{Methods} \label{methods}
+\chapter{Methods} 
+\label{methods}
 \section{Experimental Methods}
 Laboratory research was carried out using the future CMS pixel detector cooling system located in the Tracker Integration Facility clean room at CERN. This cooling system, hereafter referred to as \textit{TIF}, employs the \textit{2PACL} concept for evaporative CO$_2$ cooling. It allows active control of the coolant temperature, its flow rate and the heat load applied to  it. \\
 \textit{TIF} consists of a membrane pump routing liquid CO$_2$ through a concentric transfer line to a manifold where the flow is split and can be heated. \textit{Dummy Load} heaters represent the detector heat load, evaporating the CO$_2$ in the manifold. An accumulator containing 2-phase fluid on the return line of the manifold regulates the pressure set point using an array of heaters and a heat exchanger. A freon chiller cools the accumulator and the condenser at the pump inlet.\\
-A full Process and Instrumenation Diagram is given in Appendix \ref{appTIF}.
+A full Process and Instrumenation Diagram is given in Appendix \ref{app:TIF}.
 \subsection{Apparatus}
 %The TIF room and the future pixel cooling system
 %appendix: TIF P & I
@@ -204,16 +216,15 @@ A full Process and Instrumenation Diagram is given in Appendix \ref{appTIF}.
 \label{fig:TIF}
 \end{figure}
 
-The TIF cooling system services 8 cooling loops in the manifold and includes several bypasses, heaters and instrumentation that are mostly relevant to the  start-up procedure and are configured using a series of pneumatic, manual and electro-mechanical valves. 
-The plant was configured the same way for all tests: with all bypass loops closed, and a single loop, number 7424, open in the manifold. This configuration ensured all fluid leaving the plant passed through this loop and the Optimass instrument, and allows the experimental apparatus to be represented by a simplified P \& I diagram given in figure \ref{fig:TIFsimplified}.
+The TIF cooling system services eight cooling loops in the manifold and includes several bypasses, heaters and instrumentation that are mostly relevant to the  start-up procedure. These are configured using a series of pneumatic, manual and electro-mechanical valves. 
+The plant was configured the same way for all tests: with all bypass loops closed, and a single loop, number 7424, open in the manifold. This configuration ensured all fluid leaving the plant passed through this loop and through the Optimass instrument, and allows the experimental apparatus to be represented by a simplified P \& I diagram given in Figure \ref{fig:TIFsimplified}.
 \begin{figure}
 \includegraphics[width=\textwidth]{TIFsimplified.jpg}
 \caption{A simplified process and instrumentation diagram of the TIF cooling plant in the configuration relevant to the tests, displaying only relevant instrumentation. A diagram of the whole TIF if given in appendix \ref{app:TIF}}
 \label{fig:Tifsimplified}
 \end{figure}
-
 %instrument physical mounting
-The Optimass instrument was mounted on a test stand close to the \textit{TIF} manifold, as shown in figure \ref{fig:sensor}. Following guidance from Krohne, it was mounted upside-down, with the electronics module closer to the floor. The instrument's discharge was connected through a flexible pipe to the the return lines of loop 7424 in the \textit{TIF} manifold. On the supply side, the instrument was connected directly to the discharge of the heating section. 
+The Optimass instrument was mounted on a test stand close to the \textit{TIF} manifold, as shown in figure \ref{fig:sensor}. Following guidance from Krohne, it was mounted upside-down, with the MFC 400 signal converter closer to the floor. The instrument's discharge was connected through a flexible pipe to the the return lines of loop 7424 in the \textit{TIF} manifold. On the supply side, the instrument was connected directly to the discharge of the heating section. 
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.5\textwidth}
@@ -232,19 +243,19 @@ The Optimass instrument was mounted on a test stand close to the \textit{TIF} ma
           \caption{Photographs of the Optimass sensor connected to the dummy load heating section. The direction of flow is given by the blue arrows.}
 \end{figure}
 %heating section 
-The heating section of loop 7424 consists of a 35 mm OD vertical pipe welded to two tee unions. Two cartridge heater inside 22 mm pipes are axially inserted into the pipe through the tee fittings, as shown in figure \ref{fig:heaters}. A drawing of the heater is given in Appendix \ref{app:DummyLoad}. The flow enters the heating section radially with respect to the heaters through the lower tee union. It is forced into an anuular shape encircling the heater, and flows upward to the discharge tee-union. It then enters a short unobstructed circular series of fittings before reaching the Optimass instrument. Guidance from Krohne engineers and the instrument documentation indicated that the geometry at the sensor in let was satisfactory.
+The heating section of loop 7424 consists of a 35 mm OD vertical pipe welded to two tee unions. Two cartridge heater inside 22 mm pipes are axially inserted into the pipe through the tee fittings, as shown in figure \ref{fig:heaters} and in the drawing in Appendix \ref{app:DummyLoad}. The flow enters the heating section radially with respect to the heaters through the lower tee union. It is forced into an anuular shape encircling the heater, and flows upward to the discharge tee-union. It then enters a short unobstructed series of circular fittings before reaching the Optimass instrument. Guidance from Krohne engineers and the instrument documentation indicated that the geometry at the sensor in let was satisfactory.
 %insulation
 The vacuum-insulated instrument, as well as all exposed piping, was covered with a 20 mm layer of \textit{Armaflex} insulation to mitigate heat pick-up. All fittings were leak tested at 50 bar gas using a CO$_2$ sniffer prior to testing, and the instrument's position and inlet conditions respected the guidelines given in Appendix, as well as input from Krohne engineers. 
 
 %Simplified P & I
 %Operational Envelope 
 \subsection{Control and Data Acquisition}
-All of the instrumentation on the TIF plant, the dummy load and the Optimass flow meter is cabled to a central PLC in the TIF clean room. Each instrument communicates a 4-20 mA analogue current signal, which is mapped by the PLC to produce a value in the correct units. All of the data is continuously logged to a server, day and night. The data is logged using a change or duration algorithm - logging new data only when one of the signals has changed. This produces a sampling rate of several Hz during transient conditions - meaning hundreds of thousands of data points over the 3-week test campaign.
+All of the instrumentation on the TIF plant, the dummy load and the Optimass flow meter is cabled to a central PLC in the TIF clean room. Each instrument communicates a 4-20 mA analogue signal, which is mapped by the PLC to produce a value in the correct units. All of the data is continuously logged to a server, day and night. The data is logged using a change or duration algorithm - logging new data only when one of the signals has changed. This produces a sampling rate of several Hz during transient conditions - meaning hundreds of thousands of data points over the 3-week test campaign.
 The Optimass sensor was configured by Krohne Italy to deliver mass flow, density and temperature signals through a 4-20 mA bus in the following measurement ranges:\\
 \begin{itemize}
-\item{Mass Flow Rate: 1.4-115 g/s} %check this
-\item{Density: 100.6 - 1200 $kgm^{-3}$}% is it?
-\item{Temperature: ????}
+\item{Mass Flow Rate: 1.4-115 gs$^{-1}$} 
+\item{Density: 100.6 - 1100 kgm$^{-3}$}
+\item{Temperature: -40 - +40 $^\circ$C}
 \end{itemize}
 The sensor was cabled to the same PLC controlling TIF and logging all of its instrumentation, and the signals were mapped to the values configured by Krohne. This approach streamlined control and post-processing by consolidating the plant, heaters and instrument on a single Scada interface, and logging the data in a single location at common timesteps. 
 \subsection{Variables and Assumptions}
@@ -277,15 +288,15 @@ Vapour Quality & Dummy Load Power & 5-15 minutes\\\hline
 \end{table}
 \end{center}
 Altering test conditions employed a nested approach. First, the coolant temperature was set in the accumulator. Then various heat loads were applied at a given pump speed to explore a range of vapour qualities at a given flow rate, before changing the pump conditions. A typical test segment: various heat loads at a given flow rate and temperature, is shown in Figure \ref{fig:typicalTest}. 
-
+\FloatBarrier
 \begin{figure}
 %EDIT THIS PICTURE FOR CONSTANT TEMPERATURE
 \includegraphics[width=\textwidth]{typicalTestEdited}
 \caption{A typical test. The steps in heat load are shown as vertical red lines.}
 \label{fig:typicalTest}
 \end{figure}
-
-\section{Data Analysis Methods}
+\FloatBarrier
+\section{Data Analysis Methods} \label{analysis}
 A method, summarised in Figure \ref{fig:processing}, was devised for the export, pre-processing and process of data. This approach filtered through the hundreds of thousands of data points to reach a small subset of steady-state data during test conditions. 
 
 \begin{figure}
@@ -323,12 +334,12 @@ With the key signals filtered to leave only steady state conditions, these were 
 Analysis employed an theoretical MATLAB model to compute thermodynamic state variables in the sensor, and called a refrigerant simulation program called REFPROP to compute the local conditions of interest. %refrigerant simulation??\\
 REFPROP, developed by National Instruments, is a widely used program that simulates refrigerant performance using a combination of analytical and empirical methods. %true??
 \subsection{Calculation of Reference Conditions}
-The local density and vapour quality in the Optimass sensor are calculated using the local pressure and specific enthalpy. 
+The local density and vapour quality in the Optimass sensor were calculated using the local pressure and specific enthalpy. 
 %juxtapose pure liquid and 2-phase approaches to determining position in P-h
-A pressure and an enthalpy give the fluid's exact location in the vapour dome, and the vapour quality and density can be read from the chart, as shown in Figure \ref{enthalpyMethod}. This is implemented using REFPROP. With the following syntax: \\\\
+A pressure and an enthalpy give the fluid's exact location in the vapour dome, and the vapour quality and density can be read from the chart, as shown in Figure \ref{enthalpyMethod}. This was implemented using REFPROP. With the following syntax: \\\\
 \textit{Q = refpropm('Q','P',$<P_5$ [kPa]$>$ , 'H', $<h_5$ [J/kg]$>$ , 'CO2')} \\\\
 The local enthalpy at the sensor, \textit{$h_5$}, is given by the sum of the manifold inlet enthalpy, $h_3$ and the change in enthalpy due to the heat load, $\Delta$h.\\
-\textit{$h_3$} is determined with REFPROP from the inlet manifold inlet conditions (Pressure and Temperature in pure liquid), while the change in enthalpy is calculated from the heat load and reference mass flow rate.\\\\
+\textit{$h_3$} was determined with REFPROP from the inlet manifold inlet conditions (Pressure and Temperature in pure liquid), while the change in enthalpy was calculated from the heat load and reference mass flow rate.\\\\
 \textit{$h_3$=refpropm('H','P',$<P_3$ [kPa]$>$ ,'T', $<T_3$ [K]$>$, 'CO2')}\\\\
 p = Heat Load [W]\\
 \begin{eqnarray}
@@ -339,8 +350,20 @@ p = Heat Load [W]\\
 \caption{The analytic model for calculating local 2-phase conditions at the flow meter.}
 \label{fig:enthalpyMethod}
 \end{figure}
+\section{Calculation of Vapour Surface Velocity}
+The vapour surface veloicty is a releavnt parameter to flow meter performance, representing the linear velocity of the vapour phase in the pipe. The VSF depends both on the vapour quality  and the density of the vapour phase, which in turn varies with the saturation conditions.\\
+\begin{eqnarray}
+X=\frac{\dot{m}_{vap}}{\dot{m}_{fluid}}\\
+VSV[ms^{-1}]=\frac{\dot{m}X}{\rho_{vap}CSA} \\
+\end{eqnarray}
+The difficulty here is determining the vapour phase density from the aggregate density, but this problem was handled with REFPROP:\\
+$\rho_{vap}$=refpropm('-','Q',$<$Vapour Quality$>$,T,$<$Saturation Temperature [$^\circ$C]$>$,'CO2');
+
 \chapter{Results} \label{results}
-%OVERVIEW - 2 plots 
+
+\section{Overview}
+\FloatBarrier
+Figures \ref{plot:1} and \ref{plot:2} give an overview of the flow meter in all the conditions tested by plotting relative flow and density errors across a range of vapour quality. The mass flow errors are largely negative, varying from 0-100\% and displaying a non-linear relation to vapour quality. The density errors also vary widely, but their sign changes. The instrument appears to underestimate density in low vapour qualities, and overestimate it at high qualities.
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig1}
 \caption{An overview of relative mass flow error against vapour quality.}
@@ -351,67 +374,106 @@ p = Heat Load [W]\\
 \caption{An overview of relative density error against vapour quality.}
 \label{plot:2}
 \end{figure}
-
+A cursory overview of the errors implies that they are far from predictable, varying non-linearly with vapour quality. Further, the overall performance of the instrument across the range of vapour qualities appears to vary widely with temperature and nominal flow rate.\\
+Despite the wide spread of data, the errors appear repeatable. While individual tests with identical nominal conditions have been lumped into common data series in Figure \ref{plot:1}, seperating them allows an assessment of repeatability. Figure \ref{plot:11} shows the relative measurement errors for four independent tests at the same temperature and nominal flow rate. 
+\begin{figure}
+\includegraphics[width=\textwidth]{plots/fig11}
+\caption{Relative mass flow and density errors for various tests at 70 gs$^{-1}$ and -10$^\circ$C}
+\label{plot:11}
+\end{figure}
+Controlling for one of the test conditions thins the data, and has revelaed two interesting trends in the relative mass and density errors. These are discussed below.
+\FloatBarrier
+\section{Mass Flow Trend}
+\FloatBarrier
 %INTERESTING TRENDS
 %MASS FLOW TREND
-
+Plotting the relative errors against vapour quality at a single temperature but various flow rates, as in figures \ref{plot:3} and \ref{plot:4}, reveals a clear relation between instrument performance and nominal flow rate. The trends in Figure \ref{plot:3}, which plots performance for various flow rates at -10$^\circ$C show the absolute magnitude of the mass flow error across the entire range of vapour quality increasing with nominal mass flow rate. \\
+In addition, at higher nominal flow rates the magnitude of the mass flow error appears to peak at certain vapour qualities, the peak tending toward dryer fluid. Both these relations: mean value of the mass flow error, and vapour quality at the peak error can not be immediately explained by the theory. However, two potential explanations are the flow pattern and the vapour surface velocity under these conditions. These two parameters have been calculated for the flow conditions at each of the peak mass flow errors, and are summarised in Table \ref{tab:flowConditions}. The method for these calculations is discussed in Section \ref{analysis}.\\ 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig3}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative mass flow error for several nominal flow rates at -10$^\circ$C.}
 \label{plot:3}
 \end{figure}
+The density errors displayed in Figure \ref{plot:4} also demonstrate an improvement in sensor performance as the nominal flow rate decreases. But it appears the relation is more complex than for mass flow error.
+
+%two subplots: peak VQ and area under graph against VQ
 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig4}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative mass flow error for several nominal flow rates at -10$^\circ$C.}
 \label{plot:4}
 \end{figure}
 
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|}
+\hline\\
+\multicolumn{5}{|c|}{\textbf{Flow conditions at peak mass flow errors for coolang at -10$^\circ$C}}\\\hline
+Nominal Flow Rate & Mass Flux & Vapour Quality & Prected Flow Pattern & Vapour Surface Velocity \\\hline
+gs$^{-1}$ & kgm$^{-2}$s$^{-1}$ & & & ms$^{-1}$\\\hline
+50 & & &  & \\\hline
+\end{tabular}
+\caption{Flow conditions at peak mass flow errors in \ref{plot:3}}
+\label{flowConditions}
+\end{table}
+Because flow rate is a first order factor of VSV, this velocity generally increases with nominal flow rate for a given vapour quality, as shown in Figure \ref{gasVelocity}.
+%GAS VELOCITY PLOT
+\begin{figure}
+\includegraphics[width=\textwidth]{plots/fig12}
+\caption{Velocity of the vapour phase against vapour quality for various mass flow rates.}
+\label{gasVelocity}
+\end{figure}
+
+%Table: peak error flow pattern.
+\FloatBarrier
+\section{Temperature Trend}
 %Temperature TREND***********************
+A second trend is observable in the data when relative errors-vapour quality relations are plotted for a series of coolant temperatures  at a single flow rate, as in figures \ref{plot:5} and \ref{plot:6}. The sensor's performance, both in mass flow and density measurements, generally improves as the coolant temperature increases.
+\FloatBarrier
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig5}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative mass flow error for several temperatures at 70 gs$^{-1}$ nominal flow rate.}
 \label{plot:5}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig6}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative density error for several temperatures at 70 gs$^{-1}$ nominal flow rate.}
 \label{plot:6}
 \end{figure}
-
-%time responses typical
-%two interesting trends
+This trend is also visible at lower flow rates, albeit in a less pronounced way. The lower nominal flow rates already exhibit better overall performance  but, as shown in figures \ref{plot:7} and \ref{plot:8}, the repeatability of their errors across a range of vapour qualities decreases with coolant temperature.\\
+As with the nominal mass flow rate relation, there is no immediate explanation for the temperature trend. It can be speculated that the so called \textit{reduced pressure} plays a role. This possibility will be discussed in \ref{discussion}. 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig7}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative mass flow error for several temperatures at 30 gs$^{-1}$ nominal flow rate.}
 \label{plot:7}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig8}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative mass flow error for several temperatures at 30 gs$^{-1}$ nominal flow rate.}
 \label{plot:8}
 \end{figure}
 
 %VQ ERROR
 %30 grams, various temps
+When expressed in terms of vapour quality measurement errors, the performance of the sensor is encouraging at low flow rates. At 30 gs$^{-1}$ and 20 gs$^{-1}$, summarised in figures \ref{plot:9} and \ref{plot:10}, the vapour quality error falls within 20\%, and decreases with true vapour quality.
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig9}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative vapour quality error against vapour quality for various temperatures at 30 gs$^{-1}$ nominal flow rate.}
 \label{plot:9}
 \end{figure}
 %20 grams
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig10}
-\caption{An overview of relative density error against vapour quality.}
+\caption{Relative vapour quality error against vapour quality for -10$^\circ$C, 20 gs$^{-1}$ nominal flow rate.}
 \label{plot:10}
 \end{figure}
-\chapter{Discussion}
+\chapter{Discussion} \label{discussion}
 
 %gas phase flow rate. reduced pressure. undersized instrument. 
 \chapter{Conclusions}
-\chapter{Future Work}\label{future work}
+\chapter{Further Research}
+\label{further research}
 larger flow meter, dedicated test rig, volumetric flow rate of gas phase? flow regimes, frequency domain analysis, flow meter positioning. real time reference condition calculation. flow velocity. test low flows using bypass. chiller management. definition of true performance envelope.two-phase signal what does it mean?
 \iffalse
 \bibliographystyle{ieeetr}
@@ -421,13 +483,25 @@ larger flow meter, dedicated test rig, volumetric flow rate of gas phase? flow r
 \bibitem{O'Banion 2013}
 Tom O'Banion,  "Coriolis: the direct approach to mass flow measurement." \textit{Chemical Engineering Progress} 109.3 2013, pp. 41-46.
 
-\bibitem{mastrullo 2010}
-R. Mastrullo, A.W. Mauro, A. Rosato, G.P. Vanoli"Carbon dioxide heat transfer coefficients and pressure drops during flow boiling: Assessment of predictive methods." \textit{International Journal of Refrigeration} 2010, vol. 33, pp. 1068-1085
+\bibitem{REFPROP}
+REFPROP. NIST REfrigerant Propertiex Database 23, Gaithersburg, MD, 1998, Version 6.01.
 
-\bibitem{iso}
+\bibitem{Wu 2011}
+J. Wu et al. "Investigation of heat transfer and pressure drop of CO 2 two-phase flow in a horizontal minichannel." \textit{International Journal of Heat and Mass Transfer} 54.9 2011. pp. 2154-2162.
+
+\bibitem{Mastrullo 2010}
+R. Mastrullo, A.W. Mauro, A. Rosato, G.P. Vanoli. "Carbon dioxide heat transfer coefficients and pressure drops during flow boiling: Assessment of predictive methods." \textit{International Journal of Refrigeration} 2010, vol. 33, pp. 1068-1085
+
+\bibitem{Mastrullo 2009c}
+R. Mastrullo et al. "Comparison of R744 and R134a heat transfer coefficients during flow boiling in a horizontal circular smooth tube." \textit{International Conference on Renewable Energies and Power Quality (ICREPQ’09)}, Valencia, Spain, April 15-17. 2009.
+
+\bibitem{Yun 2005}
+Yun et al. "Flow boiling heat transfer of carbon dioxide in horizontal mini tubes." \textit{International Journal of Heat and Fluid Flow} 26.5 2005. pp. 801-809.
+
+\bibitem{ISO}
 International Organization for Standardization. "ISO 10790:2015(E) Measurement of fluid in closed conduits - Guidance to the selection, installation and use of Coriolis flowmeters (mass flow, density and volume flow measurements)." 2015
 
-\bibitem{mastrullo 2009a}
+\bibitem{Mastrullo 2009a}
 R. R. Mastrullo, A.W. Mauro, A. Rosato, G.P. Vanoli. "Carbon dioxide local heat transfer coefficients during flow boiling in a horizontal circular smooth tube." \textit{International Journal of Heat and Mass Transfer} 2009, vol. 52, pp. 4184-4194
 
 \bibitem{TIF PoS}
@@ -443,7 +517,7 @@ Krohne Group. "Optimass 6400" Internet: \underline{http://optimass6400.krohne.co
 \bibitem{krohne brochure}
 Krohne Group. "Optimass 6400." Brochure. Apr 2013
 
-\bibitem{thome 1}
+\bibitem{Cheng 2008}
 L. Cheng, G. Ribatski, J. M. Quib$\acute{e}$n, J R. Thome. "New prediction methods for CO$_2$ evaporation inside tubes: Part I - A two-phase flow pattern map and a flow pattern based phenomenological model for two-phase flow frictional pressure drops." \textit{International Journal of Heat and Mass Transfer} vol. 51, pp. 111-124, 2008
 
 \bibitem{bart}
@@ -477,6 +551,10 @@ B. Verlaat, "CO2 cooling is getting hot in high-energy physics." \textit{CERN Co
 \bibitem{Augyrond 2001}
 L. Augyrond \textit{et al.} "Void Fraction Measurement in Two-Phse Helium Flow with Electron Energy Attenuation Detector." \textit{Cryogenic Engineering Conference}, Jul. 2001, Madison, WI, USA C-09B-02
 
+\bibitem{MIT}
+Jacopo Buongiorno. "NOTES ON TWO‐PHASE FLOW, BOILING HEAT TRANSFER, AND BOILING CRISES
+IN PWRs AND BWRs." \textit{MIT OpenCourseWare.} Fall 2010.
+
 \bibitem{Zhao 2013}
 Y. Zhao, Q. Bi, R. Hu. "Recognition and measurement in theflow pattern and void fraction of gas-liquid two-phase flow in vertical upward pipes using the gamma densitometer." Applied Thermal Engineering 60 (2013) 398e41
 
@@ -495,6 +573,9 @@ B. R. Jean. "A Microwave Sensor for Steam Quality." IEEE Transaction on Instrume
 
 \bibitem{Dorfman 2006}
 A. Dorfman, E. Fridman. "Vapor quality measurement by a discharging calorimeter." Fluid Phase Equilibria, 244 (2006) 46–51
+
+\bibitem{emerson2Phase}
+Emerson Process Management. "Explaining how two-phase flow affects mass flowmeters." \textit{Micro Motion, Inc.} 2004
 
 \end{thebibliography}
 \appendix
