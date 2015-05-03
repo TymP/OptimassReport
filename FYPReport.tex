@@ -85,6 +85,7 @@ V & Voltage & Volts \\\hline
 p & Power & Watts \\\hline
 $\rho$ & Density & kgm$^{-3}$\\\hline
 v & velocity &  ms$^{-1}$\\\hline
+VPV & Vapour Phase Velocity & ms$^{-1}$
 \end{tabular}
 \end{center}
 \tableofcontents
@@ -350,8 +351,8 @@ p = Heat Load [W]\\
 \caption{The analytic model for calculating local 2-phase conditions at the flow meter.}
 \label{fig:enthalpyMethod}
 \end{figure}
-\section{Calculation of Vapour Surface Velocity}
-The vapour surface veloicty is a releavnt parameter to flow meter performance, representing the linear velocity of the vapour phase in the pipe. The VSF depends both on the vapour quality  and the density of the vapour phase, which in turn varies with the saturation conditions.\\
+\section{Calculation of Vapour Phase Velocity}
+The vapour phase veloicty is a relevant parameter to flow meter performance, representing the linear velocity of the vapour phase in the pipe. The VPV depends both on the vapour quality  and the density of the vapour phase, which in turn varies with the saturation conditions.\\
 \begin{eqnarray}
 X=\frac{\dot{m}_{vap}}{\dot{m}_{fluid}}\\
 VSV[ms^{-1}]=\frac{\dot{m}X}{\rho_{vap}CSA} \\
@@ -360,10 +361,10 @@ The difficulty here is determining the vapour phase density from the aggregate d
 $\rho_{vap}$=refpropm('-','Q',$<$Vapour Quality$>$,T,$<$Saturation Temperature [$^\circ$C]$>$,'CO2');
 
 \chapter{Results} \label{results}
-
+Because of the size of the raw data spread over weeks of testing and the focus of this study on steady-state conditions, the results presented below summarise the sensor's performance by examining measurement errors under various conditions. The key parameters have been defined as the relative flow rate measurement error, and the relative density measurement error. Vapour quality has been adopted as a common parameter to plot performance against, as is common in the research discussed in Chapter \ref{litReview}.
 \section{Overview}
 \FloatBarrier
-Figures \ref{plot:1} and \ref{plot:2} give an overview of the flow meter in all the conditions tested by plotting relative flow and density errors across a range of vapour quality. The mass flow errors are largely negative, varying from 0-100\% and displaying a non-linear relation to vapour quality. The density errors also vary widely, but their sign changes. The instrument appears to underestimate density in low vapour qualities, and overestimate it at high qualities.
+Figures \ref{plot:1} and \ref{plot:2} give an overview of the flow meter's performance in all the conditions tested by plotting relative flow and density errors across a range of vapour qualities. The mass flow errors are largely negative, varying from 0-100\% and displaying a non-linear relation to vapour quality. The density errors also vary widely, but, for some conditions, their sign changes with vapour quality. The instrument appears to underestimate density in low vapour qualities, and overestimate it at high qualities.\\
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig1}
 \caption{An overview of relative mass flow error against vapour quality.}
@@ -381,14 +382,12 @@ Despite the wide spread of data, the errors appear repeatable. While individual 
 \caption{Relative mass flow and density errors for various tests at 70 gs$^{-1}$ and -10$^\circ$C}
 \label{plot:11}
 \end{figure}
-Controlling for one of the test conditions thins the data, and has revelaed two interesting trends in the relative mass and density errors. These are discussed below.
+Controlling for one of the test conditions refines the data, and reveals two interesting trends in the relative mass and density errors. They are discussed below.
 \FloatBarrier
 \section{Mass Flow Trend}
 \FloatBarrier
-%INTERESTING TRENDS
-%MASS FLOW TREND
-Plotting the relative errors against vapour quality at a single temperature but various flow rates, as in figures \ref{plot:3} and \ref{plot:4}, reveals a clear relation between instrument performance and nominal flow rate. The trends in Figure \ref{plot:3}, which plots performance for various flow rates at -10$^\circ$C show the absolute magnitude of the mass flow error across the entire range of vapour quality increasing with nominal mass flow rate. \\
-In addition, at higher nominal flow rates the magnitude of the mass flow error appears to peak at certain vapour qualities, the peak tending toward dryer fluid. Both these relations: mean value of the mass flow error, and vapour quality at the peak error can not be immediately explained by the theory. However, two potential explanations are the flow pattern and the vapour surface velocity under these conditions. These two parameters have been calculated for the flow conditions at each of the peak mass flow errors, and are summarised in Table \ref{tab:flowConditions}. The method for these calculations is discussed in Section \ref{analysis}.\\ 
+Plotting the relative errors against vapour quality at a single temperature but various flow rates, as in figures \ref{plot:3} and \ref{plot:4}, reveals a clear relation between instrument performance and nominal flow rate. The trends in Figure \ref{plot:3}, which plots performance for various flow rates at -10$^\circ$C, show the absolute magnitude of the mass flow error across the entire range of vapour quality increasing with nominal mass flow rate. \\
+In addition, at higher nominal flow rates the magnitude of the mass flow error appears to peak at certain vapour qualities, the peak tending toward dryer fluid as nominal flow rate increases. Both these relations: mean value of the mass flow error, and vapour quality at the peak error can not be immediately explained by the theory. However, two potential explanations are the flow pattern and the vapour phase velocity (VPV)under these conditions. These two parameters have been calculated for the flow conditions at each of the peak mass flow errors, and are summarised in Table \ref{tab:flowConditions}. The method for these calculations is discussed in Section \ref{analysis}.\\ 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig3}
 \caption{Relative mass flow error for several nominal flow rates at -10$^\circ$C.}
@@ -408,14 +407,18 @@ The density errors displayed in Figure \ref{plot:4} also demonstrate an improvem
 \begin{tabular}{|c|c|c|c|c|}
 \hline\\
 \multicolumn{5}{|c|}{\textbf{Flow conditions at peak mass flow errors for coolang at -10$^\circ$C}}\\\hline
-Nominal Flow Rate & Mass Flux & Vapour Quality & Prected Flow Pattern & Vapour Surface Velocity \\\hline
-gs$^{-1}$ & kgm$^{-2}$s$^{-1}$ & & & ms$^{-1}$\\\hline
-50 & & &  & \\\hline
+Nominal Flow Rate & Vapour Quality & Mass Flux & Predicted Flow Pattern & Vapour Phase Velocity \\\hline
+gs$^{-1}$ &  & kgm$^{-2}$s$^{-1}$ & & ms$^{-1}$\\\hline
+50 &0.476 & 497 & Annular & 3.42 \\\hline
+60 &0.485 & 597 & Annular & 3.93 \\\hline
+70 &0.366 & 696 & Annular & 3.90 \\\hline
+80 &0.346 & 796 & Annular & 3.91 \\\hline
+90 &0.293 & 895 & Annular & 3.57 \\\hline
 \end{tabular}
 \caption{Flow conditions at peak mass flow errors in \ref{plot:3}}
-\label{flowConditions}
+\label{tab:flowConditions}
 \end{table}
-Because flow rate is a first order factor of VSV, this velocity generally increases with nominal flow rate for a given vapour quality, as shown in Figure \ref{gasVelocity}.
+Because flow rate is a first order factor of VPV, this velocity generally increases with nominal flow rate for a given vapour quality, as shown in Figure \ref{gasVelocity}.
 %GAS VELOCITY PLOT
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig12}
@@ -441,7 +444,7 @@ A second trend is observable in the data when relative errors-vapour quality rel
 \label{plot:6}
 \end{figure}
 This trend is also visible at lower flow rates, albeit in a less pronounced way. The lower nominal flow rates already exhibit better overall performance  but, as shown in figures \ref{plot:7} and \ref{plot:8}, the repeatability of their errors across a range of vapour qualities decreases with coolant temperature.\\
-As with the nominal mass flow rate relation, there is no immediate explanation for the temperature trend. It can be speculated that the so called \textit{reduced pressure} plays a role. This possibility will be discussed in \ref{discussion}. 
+As with the nominal mass flow rate relation, there is no immediate explanation for the temperature trend. It can be speculated that the so called \textit{reduced pressure} plays a role. This possibility is discussed in Chapter \ref{discussion}. 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig7}
 \caption{Relative mass flow error for several temperatures at 30 gs$^{-1}$ nominal flow rate.}
@@ -469,10 +472,26 @@ When expressed in terms of vapour quality measurement errors, the performance of
 \label{plot:10}
 \end{figure}
 \chapter{Discussion} \label{discussion}
-
+\section{Overview}
+The bulk of results agreed with the intuitive expectations outlined in Chapter \ref{litReview}. While the Optimass 6400 succeeds in continues measurement of 2-phase flow, its performance is unpredictable. Flow and density measurements are complex, and their accuracy seems to depend on temperature, vapour quality and mass flow rate with relations that cannot be readily consolidated into a single theory, given the current literature.\\
+While the data is broadly spread, the test method has been broadly validated by its repeatability, and data has been collected strategically to fulfill the original objectives: evaluate a broad performance envelope, identify trends of interest, and conduct further testing to evaluate their repeatability.\\
+In this way, three interesting trends have been identified - at least one of them immediately useful to the potential users of the instrument. First, the measurement accuracy of the instrument of both mass flow rate and density improves as the flow rate is reduced. For the lowest flow rates: 20 and 30 gs$^-1$, the mass flow measurement error magnitude falls within 25\%, and within 10\% at 20 gs$^-1$. As for density measurement at low flow rates, the instrument's performance is potentially practical for its intended use of estimating vapour quality. At 20 gs$^-1$, the vapour quality measurement error (using the measured density and reference flow rate)  decays to less than 10\% for vapour qualities greater than 28\%. While the error reaches 40\% for low vapour qualities, it is at high vapour qualities, close to dry-out, that accuracy is valued. The fact that the instruments accuracy improves to 10\% towards the dry side of the vapour means it may perform well enough to be of interest to CERN.\\
+\section{Mass Flow Rate Trend}
+The data also demonstrated a second correlation. At -10$^\circ$, the set point with sufficient flow rates, a clear positive relation between mean value of relative mass flow error and nominal mass flow rate was observed. In addition, the non-linear mass flow error peaked as a function of vapour quality, with the peaks tending dryward with decreasing flow rate. Given the literature on coriolis flow meter performance in 2-phase, a tempting explanation was the occurence of a flow pattern transition at this point. To test this, the flow conditions at each of the peak mass flow errors in Figure \ref{plot:3} were tabulated in Table \ref{tab:flowConditions}, and their corresponding vapour quality and mass flux were plotted on a Cheng flow pattern map \cite{cheng 2008}. This revealed that the mass flow error peaks occur at a vapour quality in the order of 10 percentage points greater than the flow pattern transition between intermittent and annular flow predicted by Cheng. In addition, this theory would not explain the dry-ward tendency of the vapour quality at peak mass flow errors with decreasing flow rate.\\
+In response, a second theory for the mass flow trend was explored: the role of vapour phase velocity. Using a MATLAB function calling REFPROP, vapour phase velocities were calculated for the flow conditions at each peak mass flow error and tabulated in Table \ref{tab:flowConditions}. The flow velocities for the peak mass flow rates formed a tight group around 3.5 ms$^{-1}$, with a standard deviation of: . Given the inexact location of the data points used to approximate the true peaks, this was interpreted as strong evidence that the mass flow error behaviour was due to vapour phase velocity. As shown in Figure \ref{gasVelocity}, the vapour phase velocity accelerates with nominal mass flow rate at a given vapour quality, which could explain the increasing magnitude of the mean value of relative mass errors. But crucially,the tight group of vapour phase velocities indicate that the error peaks at a critical velocity, and decays afterward. Because mass flow rate and vapour quality are first order factors of VPV, the VPV reaches critical velocity at a higher vapour quality for a lower mass flow rate. Recall equation ???. This would also explain why the lower nominal mass flow rates do not exhibit a peak error - their VPVs never reach the critical value. As shown in Figure \ref{gasVelocity}, the lower mass flow rates do not sufficiently accelerate the vapour phase to reach critical velocity.
+\section{Temperature Trend}
 %gas phase flow rate. reduced pressure. undersized instrument. 
+\section{Errors and Uncertainty}
+The experimental method exhibited sufficient accuracy to deliver clear, repeatable results over a wide range of test conditions. However, the nature of the apparatus limit the relevance of the findings to a prelimenary overview of the Optimass instrument's performance. A direct specification of the error bars on the findings is impractical due to the many layers of filtering and analysis, and the assumptions inherent in the physical methodology. TIF is not a laboratory test bench, but a large, operational cooling system. There were significant limitations on the apparatus, including:
+\begin{itemize}
+\item{The chiller that cools the accumulator and condenser requires a heat load of at least 3 kW on the system to function effectively, depending on the temperature set point. This makes testing at low flow rates and temperatures at the edges of the plant's envelope difficult. Low flow rates require very low heat loads for a broad range of vapour quality without dry out. And due to environmental heat leak, low temperatures tend to overload the chiller while high ones cause it to overheat.}
+\item{Accumulator temperature set point regulation is PID controlled, and responds slowly enough that nominally steady-state data includes temperature fluctuations up to 1 $^\circ$C.}
+\item{The nominal flow rate lacks any control system. It was set by adjusting the speed and stroke of the pump and waiting for the transient response to settle. A change in vapour quality changes the pressure drop and therefore the system characteristic, resulting in flow rate fluctuations in the order fo 5 gs$^{-1}$. All error signals and reference conditions are calculated using the real-time reference flow rate [FT3020], so this error is only in \textit{nominal} flow rate, i.e. flow trends on the plots.}
+\item{The inlet pressure at the instrument is a crucial parameter affecting the calculation of reference vapour quality and density. However, the sensor inlet lacks instrumentation. Instead, the pressure in the sensor is assumed to equal the saturation pressure of the temperature measured inside the sensor [TT7424]. Since the flow is 2-phase, it is fair to assume that the saturation pressure is equal to the local pressure. However, a pressure-drop on the inlet side of the instrument would result in an underestimate of true inlet pressure. Krohne specifies a liquid pressure drop in the order of mbar, even at a high flow rates. But there is no data on 2-phase pressure drop, which the literature shows is far higher.}
+\end{itemize}
+The collective effect of these uncertainties is a study that characterises the overall performance of the Optimass instrument, and demonstrates under which conditions it performs best. While the errors measured are repeatable, the nature of the apparatus means that they are not a reliable measure of the sensor's accuracy under laboratory conditions. As a result, this study is largely a stepping tone: showing the viability of the approach to vapour quality measurement, the conditions underwhich this particular instrument's performance is satisfactory, and areas for futher research.
 \chapter{Conclusions}
-\chapter{Further Research}
+\chapter{Future Work}
 \label{further research}
 larger flow meter, dedicated test rig, volumetric flow rate of gas phase? flow regimes, frequency domain analysis, flow meter positioning. real time reference condition calculation. flow velocity. test low flows using bypass. chiller management. definition of true performance envelope.two-phase signal what does it mean?
 \iffalse
@@ -582,15 +601,15 @@ Emerson Process Management. "Explaining how two-phase flow affects mass flowmete
 \chapter{The TIF Cooling System}\label{app:TIF}
 \includepdf{../docs/PI_TIF_Plant.pdf}
 \includepdf[landscape]{../docs/PI_TIF_Manifold.pdf}
-\chapter{Krohne Calibration and Sizing Documents}
+%\chapter{Krohne Calibration and Sizing Documents}
 %\includepdf{../docs/calibration.pdf}
-\includepdf{../docs/sizing.pdf}
-
+%\includepdf{../docs/sizing.pdf}
 
 \chapter{Dummy Load Heater Module Mechanical Design} \label{app:DummyLoad}
 \includepdf[landscape]{../docs/Heater_Design.pdf}
 \includepdf[landscape]{../docs/heater2.pdf}
 \includepdf[landscape]{../docs/heater3.pdf}
 \chapter{MATLAB Code}
+\chapter{Test Log}
 \chapter{Raw Data}
 \end{document}
