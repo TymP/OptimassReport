@@ -51,7 +51,7 @@ Thanks to Dr. Roger Ngwompo, my academic supervisor, and Dr. Martin Ansell, FYP 
 \acro{CMS}{Compact Muon Solenoid - a CERN experiment} 
 \acro{LHC}{Large Hadron Collider}
 \acro{2PACL}{Two-phase accumulator control loop}
-\acrodef{LS1}[sc]{Long Shutdown One}{A planned shutdown of the LHC between February 2013 and April 2015 for maintenance and upgrade.}
+\acro{LS1}{Long Shutdown One - A planned shutdown of the LHC between February 2013 and April 2015 for maintenance and upgrade.}
 \acro{CFCs}{Chlorofluorocarbons} 
 \acrodef{Tracker}[SC]{Type of particle detector that tracks the paths of charged particles.} 
 \acro{TIF}{Tracker Integration Facility}
@@ -153,7 +153,7 @@ This report documents the background to the problem and relevant literature in C
 \section{Behaviour of 2-Phase CO$_2$} \label{behaviour}
 As a coolant, CO$_2$ is new and different from conventional refrigerants, and its characteristics are generally difficult to predict. Research so far has characterized its performance in terms of heat transfer coefficients in convection and boiling, pressure drops and flow pattern. These phenomena are characterised with respect to vapour quality, because this convenient parameter takes into account mass flow rate and heat flux, simplifying data visualisation. A recent statistical review presented by Mastrullo et al. updated existing data sets with new experimental data, improving the characterisation of this coolant. \cite{Mastrullo 2010}\\
 The most relevant data to this study concerns flow patterns. As a flowing coolant evaporates, it transitions through various physical configurations, some of which are summarised in \ref{fig:flowPatterns}. These flow patterns are influenced by the vapour quality of the fluid, the mass flux - a function of mass flow rate and pipe geometry, and the presence of swirl or turbulence.
-
+%Mention Vapour Phase Velocity, maybe lsip ratio.
 \begin{figure}
 \includegraphics[width=\textwidth]{flowPatterns}
 \caption{A summary of liquid-vapour flow patterns. \cite{MIT}}
@@ -168,6 +168,9 @@ Cheng et al. published a widely-cited flow pattern map based on a the previous C
 \end{figure}
 While the boundaries between flow regimes are frequently updated with new data, the general pattern of CO$_2$ cooling performance as it evaporates has remained consistent. A broad spectrum of literature summarised in a review by Mastrullo et al. \cite{Mastrullo 2010} observes the flow transitioning from single-phase to some form of intermittent flow, then to a broad region of annular flow, then finally to dry out, where it exhibits a dramatic decrease in HTC and thus in cooling efficiency. If the coolant continues to be heated, it reaches mist flow, and its cooling performance continues to plummet. 
 %reduced pressure if it becomes relevant
+%REDUCED PRESSURE
+
+\cite{Mastrullo 2012}. \cite{Mastrullo 2012b}
 \section{Determining Vapour Quality}
 Literature on direct measurement of vapour quality is scarce, especially for CO$_2$. B.R. Jean presented a steam quality sensor that employs microwaves, yielding an accuracy of 2.8\%. \cite{Jean 2007}. The operating principle relied on the dielectric properties of water. A review of steam quality measurement approaches conducted by Dorman and Fridman \cite{Dorfman 2006} evaluated calorimeter, chemical tracer and flow seperation methods, revealing their significant drawbacks. The authors then presented a new theoretical method for measuring vapour fraction, but it was limited to fluid in a static container. \\
 Void fraction, defined as the volumetric fraction of fluid in the vapour phase, is an intuitive candidate for an inderect measurement of vapour quality. 
@@ -296,6 +299,7 @@ Altering test conditions employed a nested approach. First, the coolant temperat
 \caption{A typical test. The steps in heat load are shown as vertical red lines.}
 \label{fig:typicalTest}
 \end{figure}
+After observing steady state conditions, the timestamp for these conditions was logged in an Excel file and the plant was allowed to continue running for one minute, before changing the test conditions again. This ensures a span of one minute of steady-steady state data which could be time averaged to elimenate sensor noise.
 \FloatBarrier
 \section{Data Analysis Methods} \label{analysis}
 A method, summarised in Figure \ref{fig:processing}, was devised for the export, pre-processing and process of data. This approach filtered through the hundreds of thousands of data points to reach a small subset of steady-state data during test conditions. 
@@ -328,7 +332,9 @@ Reference & PT7450 & $P_5'$ & Pressure at instrument discharge. \\\hline
 \label{tab:keySignals} 
 \end{table}
 \end{center}
-A page of plots tracking these signals was created in the Scada interface. Then, \textit{.csv} data for each signal was exported by navigating to the time of a given test and exporting a 4 hour window of data. These \textit{.csv} files for each day of testing were then pre-processed using modified MATLAB scripts developed by Bart Verlaat. Pre-processing involved merging the data from each test into a single database, handling empty cells and overlapping timesteps, and saving the cleaned data in a new database to be called by MATLAB. 
+A page of plots tracking these signals was created in the Scada interface. Then, \textit{.csv} data for each signal was exported by navigating to the time of a given test and exporting a 4 hour window of data. These \textit{.csv} files for each day of testing were then pre-processed using modified MATLAB scripts inhereted from Bart Verlaat at Nikhef. These consolidate the data from each test into a single database - handling empty cells and overlapping timesteps, and saving the cleaned data in a new database to be called by MATLAB.
+\subsection{Steady-state Handling}
+The raw data in the database was filtered to plot only steady state data. The architecture for this procedure combined the user-identified steady state timestamps with an algorithm assessing noise later in time. While timestamps indicated nominally steady-state data for one minute, the imperfect method of a user identifying steady state conditions and deciding when to change test conditions necessitated a more robust approach. Starting at the timestamp indicating steady state, the script moves forward through the index of each data vector, calculating its current mean value, the mean of the next 3 indexes, and the deviation of the future value from the current one. If the deviation falls within allowable noise levels, the script continues collecting steady-state data. IF the timestamps reach 30 seconds difference, the script terminates - 30 seconds is the maximum sample. At the end of each loop through a steady-state time stamps, all the steady state values are averaged into a single value representing the whole sample. This is implemented in the script \textit{createTimeFilter3} given in Appendix \ref{app:Matlab} 
 \subsection{Data Processing and Visualisation}
 With the key signals filtered to leave only steady state conditions, these were processed to assess the sensor's performance. The sensor was evaluated by comparing its readings to a combination of reference instrumentation and analytically computed reference conditions. \\
 %REFPROP mentioned here
@@ -491,14 +497,30 @@ The experimental method exhibited sufficient accuracy to deliver clear, repeatab
 \end{itemize}
 The collective effect of these uncertainties is a study that characterises the overall performance of the Optimass instrument, and demonstrates under which conditions it performs best. While the errors measured are repeatable, the nature of the apparatus means that they are not a reliable measure of the sensor's accuracy under laboratory conditions. As a result, this study is largely a stepping tone: showing the viability of the approach to vapour quality measurement, the conditions underwhich this particular instrument's performance is satisfactory, and areas for futher research.
 \chapter{Conclusions}
-\chapter{Future Work}
-\label{further research}
+This study has validated the concept of determining vapour quality from 2-phase density, and has broadly characterised the performance of the Optimass 6400 for this purpose. The data evaluated mass flow and density measurement accuracy, and its ultimate effect on vapour quality measurment, at different vapor qualities for a range of coolant temperatures between -20 and +10 $^\circ$C and nominal flow rates between 20 and 105 gs$^{-1}$. The overall performance of the instrument was, while repeatable, demonstrably unpredictable and far from satisfactory at high flow-rates and low temperatures. Measurement errors up to 100\% were observed at high nominal flow rates. However, mass flow and density accuracy in the low flow rates fell within the range of 25\%, giving vapour quality estimation errors in the order of 10\% under certain test conditions - accurate enough to be of interest to CERN.\\
+Besides performance improving at lower nominal flow rates, the data also demonstrated a series of peaks in the absolute value of mass flow error, which move dry-ward as the flow rate is lowered. Evaluating the flow conditions at these points showed that they are most likely the result of the vapor phase velocity reaching a critical value of about 3.?? ms$^-1$, SD= ??. This was further confirmed by the fact that mass flow errors at lower flow rates, whose vapour phase velocities never reach this critical value, do not exhibit a peak error. Vapour phase velocity is known to be a critical parameter in dimensioning coriolis flow meters. If the excessive vapour phase velocity is the cause of the larger flow rate errors, this would indicate that the instrument is undersized for its application.\\
+Finally, flow meter performance appeared to improve with coolant temperature. No immediate explanation for this trend was found, but it is speculated that \textit{reduced pressure} plays a role. Research of this parameter - the ratio of the cooling cycle's operating pressure to its ?? pressure, is in its infancy. But so far it has demonstrated that the physics of boiling becomes unpredictable at low reduced pressures, which could explain the greater flow and density erros at these pressures - they could be due to errors in the reference conditions or in the measurements themselves.\\
+Overall, this study provides an overview of the performance of the Optimass 6400, and has served to identify areas for further research. These are discussed below.
+\chapter{Future Work} \label{further research}
+The promising performance of the Optimass 6400 at low flow rates makes this a clear target for further research. While the present apparatus made flow rates below 20gs$^{-1}$ unsustainabale, an expected modification to the apparatus in May 2015 will allow a broader range of all test parameters to be explored. Indeed, testing of the Optimass instrument is expected to continue at CERN. Future tests should consider the following recommendations:
+\begin{itemize}
+\item{Install instrumentation at the sensor inlet to measure the true pressure, giving more accurate calculation of true and reference conditions, and allowing the measurement of pressure drop across the instrument - a crucial parameter at this location in a cooling system.}
+\item{Modify the flow meter's position to connect a straight section of pipe to its inlet, allowing time for any turbulence to settle.}
+\item{Collect further data to assess the repeatability of the mass flow and temeprature trends identified above over a range of test conditions.}
+\item{Evaluate research into the effect of \textit{reduced pressure}, and consider its effect in performance analysis.}
 larger flow meter, dedicated test rig, volumetric flow rate of gas phase? flow regimes, frequency domain analysis, flow meter positioning. real time reference condition calculation. flow velocity. test low flows using bypass. chiller management. definition of true performance envelope.two-phase signal what does it mean?
 \iffalse
 \bibliographystyle{ieeetr}
 \bibliography{bibfile}
 \fi
 \begin{thebibliography}{9}
+
+\bibitem{Mastrullo 2012}
+R. Mastrullo et al. "CO$_2$ and R410A: two-phase flow visualizations and flow boiling measurements at medium (0.50) reduced pressure." \textit{Applied Thermal Engineering} 49. 2012. pp. 2-8.
+
+\bibitem{Mastrullo 2012b}
+R. Mastrullo et al. "Flow pattern maps for convective boiling of CO 2 and R410A in a horizontal smooth tube: experiments and new correlations analyzing the effect of the reduced pressure." \textit{International Journal of Heat and Mass Transfer} vol. 55.5. 2012. pp. 1519-1528.
+
 \bibitem{O'Banion 2013}
 Tom O'Banion,  "Coriolis: the direct approach to mass flow measurement." \textit{Chemical Engineering Progress} 109.3 2013, pp. 41-46.
 
@@ -609,7 +631,13 @@ Emerson Process Management. "Explaining how two-phase flow affects mass flowmete
 \includepdf[landscape]{../docs/Heater_Design.pdf}
 \includepdf[landscape]{../docs/heater2.pdf}
 \includepdf[landscape]{../docs/heater3.pdf}
-\chapter{MATLAB Code}
+\chapter{MATLAB Code} \label{app:Matlab}
+The complete architecture for the data import, filtering, analysis and visualisation involved several hundred lines of code spread across 6 main scripts and more than dozens of analysis functions. The code was spread across directories for thermodynamics, data filtering and database management. Key functions and scripts will be given here. The rest of the code, as well as raw data and READMEs, can be found at www.github.com/TymP/OptimassMatlab.\\\
+All data and code are freely accessible, and CERN does not claim any intellectual property.
+\section{Thermodynamics}
+\section{Data Handling}
+\section{Data Visualisation}
+
 \chapter{Test Log}
 \chapter{Raw Data}
 \end{document}
