@@ -34,8 +34,8 @@
 %GUIDELINES: up to 10000 words, intro lit reveiew mehtods results discussion conclusions future work. Margins: 30mm LHS, 10mm RHS, 25 mm top and bottom. Double spaced, single sided.
 \begin{document}
 \graphicspath{{figures/}}
-\includepdf[pages={1}]{docs/bathCoverPage.pdf}
-\maketitle
+%\includepdf[pages={1}]{docs/bathCoverPage.pdf}
+%\maketitle
 \begin{abstract}
 \pagenumbering{roman}
 %Mention findings from lit reveiew
@@ -58,11 +58,11 @@ Thanks to Dr. Roger Ngwompo, my academic supervisor, and Dr. Martin Ansell, FYP 
 \acro{PH-DT}{CERN Physics Department, Detector Technologies Group}
 \acro{EGM}{Entrained Gas Management}
 \acro{DAQ}{Data Acquisition}
-\acro{SCADA}{sc}
+\acro{SCADA}{Supervisory Control and Data Acquisition - A remote control and data acquisition system facilitating communication between a user and a PLC with a graphical user interface.}
 \acro{PWM}{Pulse Width Modulation}
 \acro{R744}{Refrigerant Code for CO$_2$}
-\acro{Sub-cooling}{sub}
-\acro{Interaction Point}{point}
+\acro{Sub-cooling}{The difference between a fluids saturation temperature and current temperature. i.e. the temperature increase required to begin phase transition.}
+\acro{Interaction Point}{The point in a particle detector where the two particle beams collide releasing intense radiation in all directions.}
 \acro{.csv}{Comma-Seperated Value}
 \acro{$C_6F_{14}$}{Perflourohexane, a common industrial refrigerant and electrical insulator.}
 \end{acronym}
@@ -79,31 +79,36 @@ P & Pressure & bar abs \\\hline
 $\dot{Q}$ & Heat Load & Watts \\\hline
 $\phi$ & Void Fraction & \% \\\hline
 G & Mass Flux & kgs$^{-1}$m$^{-2}$\\\hline
-%thermal diffusivity
+A & Cross-Sectional Area & m$^2$\\\hline
 I & Current & Amperes \\\hline
 V & Voltage & Volts \\\hline
 p & Power & Watts \\\hline
 $\rho$ & Density & kgm$^{-3}$\\\hline
 v & velocity &  ms$^{-1}$\\\hline
-VPV & Vapour Phase Velocity & ms$^{-1}$
+VPV & Vapour Phase Velocity & ms$^{-1}$\\\hline
+P$_R$ &Reduced Pressure & -\\\hline
 \end{tabular}
 \end{center}
 \tableofcontents
 \chapter{Introduction}
 \pagenumbering{arabic}
-\doublespacing
-CERN's PH-DT group is undertaking extensive research and development in the area of evaporative CO$_2$ cooling for particle detectors. A crucial parameter in the design and commissioning of these systems is vapour quality - the mass fraction of fluid that is vapour. Krohne, a supplier of instrumentation for the process industry, has approached CERN with a new instrument with potential to indirectly determine vapour quality through a measurement of 2-phase density. This study seeks to evaluate this promising new technlogy that would be directly relevant to the coming decade of R\&\ignorespaces D. 
+%\doublespacing
+CERN's PH-DT group is undertaking extensive R\&\ignorespaces D in the domain of evaporative CO$_2$ cooling for particle detectors. A crucial parameter in the design and commissioning of these systems is vapour quality - the mass fraction of fluid that is vapour. Krohne, a supplier of instrumentation for the process industry, has approached CERN with a new instrument, the Optimass 6400 coriolis mass flow meter. This instrument is theoretically capable of measuring mass flow rate, density and temperature of 2-phase flow - a major breakthrough  in the field. The new technology, if it performs well enough, could be used to determine vapour quality through a measurement of 2-phase density. \\
+By measuring the accuracy of the instrument across a range of 2-phase conditions, this study seeks to evaluate its practicality for determining vapour quality in CO$_2$ cooling systems - a capability that would be directly useful in the coming decade of CO$_2$ cooling R\&\ignorespaces D. 
+\FloatBarrier
 \section{CO\texorpdfstring{$_2$}{TEXT} Cooling at CERN}
 %Background - CERN, CO2 cooling and 2PACL
-The particle detectors at CERN's various experiments require cooling to manage the heat load of the detector electronics, radiation from the interaction point and heat leak from the ambient environment. Evaporative CO$_2$ cooling has become the predominant candidate technology for future particle trackers in HEP. CO$_2$'s combination of thermodynamic properties and radiation hardness make it ideal for HEP applications - it can be used in highly radioactive areas and is considered environmentally friendly. In addition, it cools efficiently in small-diameter tubes, minimising the material budget - a crucial metric representing the amount of non-instrumentation material inside the particle detector. \\The $C_6F_14$ current cooling system for the pixel detector, the innermost layer of the CMS tracker, is  being replaced with a CO$_2$ system aned a transition to this technology is foreseen for the entire CMS tracker by the end of 2024.
+The particle detectors at CERN's various experiments require cooling to manage the heat load of the detector electronics, radiation from the interaction point and heat leak from the ambient environment. Evaporative CO$_2$ cooling has become the predominant candidate technology for future particle trackers in HEP.\cite{mishra} CO$_2$'s combination of thermodynamic properties and radiation hardness make it ideal for HEP applications - it can be used in highly radioactive areas and is considered environmentally friendly. In addition, it cools efficiently in small-diameter tubes, minimising the material budget - a crucial metric representing the amount of non-instrumentation material inside the particle detector. \cite{jerome} \\The current $C_6F_14$ cooling system for the pixel detector, the innermost layer of the CMS tracker, is  being replaced with a CO$_2$ system and a transition to this technology is foreseen for the entire CMS tracker by the year 2025.
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{figures/CMS.jpg}
 \caption{A diagram of the CMS particle detector on the LHC. \cite{mishra}}
 \label{fig: cms}
 \end{figure}	
+\FloatBarrier
 \section{2-Phase Accumulator Controlled Loop}
-The CO$_2$ systems at CERN implement the 2PACL design. \cite{Daguin 2012}. This involves pumping liquid coolant into the the detector, where it is expanded and cools its surroundings by partially evaporating. After cooling the detector with the latent heat of vaporisation, the mix of liquid and vapour returns to the plant by way of a condenser, which returns it to pure liquid phase for pumping. An accumulator filled with 2-phase fluid sits on the return line of the circuit, its pressure determining the position of the coolant temperature (and pressure as both are saturated), and therefore the position of the cooling cycle on the P-h diagram. Accumulator pressure is regulated using an array of heaters and a heat exchanger with an independent chiller circuit that also cools the condenser. The cycle and a schematic of the 2PACL concept are shown in figure \ref{fig:2PACL}.
+\FloatBarrier
+The CO$_2$ systems at CERN implement the 2PACL design. \cite{TIF PoS} \cite{bart}. This involves pumping liquid coolant into the detector, where it is expanded and cools its surroundings by partially evaporating. After cooling the detector with the latent heat of vaporisation, the mix of liquid and vapour returns to the plant by way of a condenser, which returns it to pure liquid for pumping. An accumulator filled with 2-phase fluid sits on the return line of the circuit, its pressure determining the position of the coolant temperature (and pressure as both are saturated), and therefore the position of the cooling cycle on the P-h diagram. Accumulator pressure is regulated using an array of heaters and a heat exchanger with an independent chiller circuit that also cools the condenser. The cycle and a schematic of the 2PACL concept are shown in figure \ref{fig:2PACL}.
 \begin{figure}[h!]
 \includegraphics{2PACLschem}
 \caption{A schematic of the 2PACL concept as implemented in Thermal Control System of the LHCb Velo project at CERN \cite{CO2 PoS}}
@@ -115,15 +120,16 @@ Vapour quality refers to the fraction of a fluid's mass that is in the vapour ph
 \begin{eqnarray}
 X=\frac{m_{vapour}}{m_{fluid}}
 \end{eqnarray}
-In 2PACL cooling systems, the vapour quality after the coolant evaporates in the detector volume is an essential system parameter indicating the amount of evaporation that has occurred. The quality determines how far from the coolant is from dry-out, where a dramatic decrease in heat transfer coefficients may occur, causing a sudden decrease in cooling. A real-time calculation of vapour quality would allow the design of leaner cooling systems as dry out conditions can be observed before they occur, reducing the safety factors taken in sizing the liquid mass of the system.\\
-Vapour quality at any point on a P-h diagram can be determined using the lever rule inside the vapour dome. In 2PACL, the challenge is mapping the fluid's exact location. In pure liquid, any point on the P-h diagram can be determined from pressure and temperature, but in phase transition these values are saturation conditions, and therefore a third variable is needed. One obvious choice is density, as shown in Figure \ref{fig:densityMethod}. By knowing the local pressure and density, the exact point in the vapour dome, and therefore the vapour quality, can be determined. 
+In 2PACL cooling systems, the vapour quality after the coolant evaporates in the detector volume is an essential system parameter indicating the amount of evaporation that has occurred. The quality determines how far from the coolant is from dry-out - a condition where the liquid fraction becomes so low that it begins to seperate from the pipe wall. Dry out implies a dramatic decrease in heat transfer coefficients, causing a sudden decrease in cooling that can damage the particle detector. A real-time calculation of vapour quality would allow the design of leaner cooling systems as dry out conditions can be observed before they occur, reducing the safety factors taken in sizing the liquid mass of the system.\\
+Vapour quality at any point on a P-h diagram can be determined using the lever rule inside the vapour dome, as shown in Figure \ref{fig:densityMethod}. The quality is given by ratio of the distance to the liquid phase to the width of the entire dome. But in 2PACL, it is challenging to plot the fluid's exact location in the vapour dome. \\
+In pure liquid, any point on the P-h diagram can be determined from pressure and temperature. During phase transition, on the other hand, these values are saturated, and therefore a third variable is needed. One obvious choice is density, as shown in Figure \ref{fig:densityMethod}. By knowing the local pressure and density, the exact point in the vapour dome, and therefore the vapour quality, can be determined. This represents the fundamental principle for determining vapour quality using the Optimass 6400 instrument.
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{densityMethod.jpg}
 \caption{Principle for determining vapour quality, \textit{X}, from two-phase density. Adapted from B. Verlaat. \cite{CERN courier}}
 \label{fig:densityMethod}
 \end{figure}
-
+\FloatBarrier
 \section{The Krohne Optimass 6400}
 The Optimass 6400 is a new twin bent tube coriolis mass flow meter. It features 3 independent measurements, from which it calculates 7 output signals. The 3 fundamental measurements to be assessed are:
 \begin{itemize}
@@ -136,41 +142,55 @@ The Optimass 6400 is a new twin bent tube coriolis mass flow meter. It features 
 \caption{The Krohne Optimass 6400 mass flow meter.} %cite KROHNE DATA SHEET}
 \label{fig:optimass6400}
 \end{figure}
-The instrument is unique because of its Entrained Gas Management - it is able to continue reading mass flow, density and temperature of 2-phase flow. The instrument's accuracy has been measured using liquid water and air bubbles, but never with a single fluid in 2 phases. 
+The instrument is unique because of its Entrained Gas Management - it is able to continue reading mass flow, density and temperature of 2-phase flow. The instrument's accuracy has been measured using liquid water with entrained air bubbles, but never with a single fluid in two phases. 
 \section{Aims, Objectives and Documentation}
-This study is an initial evaluation of the Optimass 6400's steady-state measurement accuracy over a wide operating envelope. Its aim is to evaluate the validate the strategy for determining vapour quality, quantify the attainable measurement under various conditions, and identify performance trends and areas for further research. Specific goals are given below:
+This study attempts an initial evaluation of the Optimass 6400's steady-state measurement accuracy over a wide operating envelope, and the implications of this accuracy on vapour quality measurement. Its aim is to evaluate the validate the strategy for determining vapour quality, quantify the attainable measurement under various conditions, and identify performance trends and areas for further research. Specific objectives are given below:
 \begin{itemize}
 \item{Compare mass flow and density readings with reference instrumentation and theory over a range of temperatures and vapour qualities.}
 \item{Quantify the instrument's steady-state performance and, if possible, identify an effective performance envelope.}
 \item{Express the instrument's accuracy in terms of vapour quality.}
+\item{Validate the theory of determining vapour quality using 2-phase density and local pressure.}
 \item{Investigate the physical phenomena behind any performance trends.}
 \item{Identify areas for further research.}
 \end{itemize}
-This report documents the background to the problem and relevant literature in Chapter \ref{litReview}, describes the method employed to test and analyse the sensor's performance in Chapter \ref{methods}, and the results of the testing in Chapter \ref{results}. Further, it documents speculation as to the cause of performance trends revealed in Chapter \ref{results} and identifies areas for further research in Chapter \ref{further research}.
+The instrument is tested over the following ranges:
+\begin{itemize}
+\item{Coolant Temperature: -25 - +5 $^\circ$C}
+\item{Nominal mass flow rate: 20 - 105 gs$^{-1}$.}
+\item{Vapour Quality 0 - 70\% using an available heat load of 0-13 kW}
+\end{itemize}
+Background to the problem and relevant literature are summarised in Chapter \ref{litReview}. Chapter \ref{methods} describes the method employed to test and analyse the sensor's performance, and the results of the testing are presented in Chapter \ref{results}. Finally, speculation as to the cause of performance trends revealed in Chapter \ref{results} and areas for further research are documented in chaters \ref{discussion} and \ref{further research}.
 
 
 \chapter{Literature Review} \label{litReview}
+\FloatBarrier
 \section{Behaviour of 2-Phase CO$_2$} \label{behaviour}
-As a coolant, CO$_2$ is new and different from conventional refrigerants, and its characteristics are generally difficult to predict. Research so far has characterized its performance in terms of heat transfer coefficients in convection and boiling, pressure drops and flow pattern. These phenomena are characterised with respect to vapour quality, because this convenient parameter takes into account mass flow rate and heat flux, simplifying data visualisation. A recent statistical review presented by Mastrullo et al. updated existing data sets with new experimental data, improving the characterisation of this coolant. \cite{Mastrullo 2010}\\
-The most relevant data to this study concerns flow patterns. As a flowing coolant evaporates, it transitions through various physical configurations, some of which are summarised in \ref{fig:flowPatterns}. These flow patterns are influenced by the vapour quality of the fluid, the mass flux - a function of mass flow rate and pipe geometry, and the presence of swirl or turbulence.
-%Mention Vapour Phase Velocity, maybe lsip ratio.
+As a coolant, CO$_2$ is new and different from conventional refrigerants, and its characteristics are generally difficult to predict. Research so far has characterized its performance in terms of heat transfer coefficients in convection and boiling, pressure drops and flow pattern.\cite{Mastrullo 2010}\cite{Cheng 2008}\cite{Yun 2005}\cite{Wu 2011} These phenomena are documented with respect to vapour quality, because this convenient parameter takes into account mass flow rate and heat flux, simplifying data visualisation. \\
+The most relevant data to this study concerns flow patterns. As a flowing coolant evaporates, the interactions between its liquid and vapour phases manifest themselves in complex ways. As vapour quality increases, the two phases' velocities diverge. Because liquid is far denser than vapour, the vapour phase requires a higher volumetric flow rate - known as the superficial phase flow rate - to achieve the mass flow rate stipulated by the vapour quality. \\
+\begin{eqnarray}
+X=\frac{\dot{m}_{vap}}{\dot{m}_{fluid}}\\
+VPV[ms^{-1}]=\frac{\dot{m}X}{\rho_{vap}A}\\
+\end{eqnarray}
+This phenomenon is a major factor in the creation of flow patterns - geometric configurations of 2-phase flow that are influenced by vapour quality, mass flux - a function of mass flow rate and pipe geometry - and the presence of swirl or turbulence. Some of these are summarised in \ref{fig:flowPatterns}. 
 \begin{figure}
 \includegraphics[width=\textwidth]{flowPatterns}
 \caption{A summary of liquid-vapour flow patterns. \cite{MIT}}
 \label{fig:flowPatterns}
 \end{figure}
-
-Cheng et al. published a widely-cited flow pattern map based on a the previous Cheng-Ribatski-Wojtan-Thome relations. \cite{Cheng 2008}. The map, shown in Figure \ref{fig:chengMap}, is valid for tube diameters between 0.6 and 10 mm, and mass velocities between 50 and 1500 kgm$^{-2}$s$^{-1}$, making it relevant to the present study.\\
+The boundaries between flow patterns are typically documented by plotting mass flux against vapour quality, giving a so-called flow pattern map. Cheng et al. published prehaps the most widely-cited flow pattern map for CO$_2$. \cite{Cheng 2008}. The map, shown in Figure \ref{fig:chengMap}, is valid for tube diameters between 0.6 and 10 mm, and mass velocities between 50 and 1500 kgm$^{-2}$s$^{-1}$, making it relevant to the present study.\\
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{chengMap}
 \caption{The updated flow pattern map for CO$_2$ developed by Cheng et al. \cite{Cheng 2008}}
 \label{fig:chengMap}
 \end{figure}
 While the boundaries between flow regimes are frequently updated with new data, the general pattern of CO$_2$ cooling performance as it evaporates has remained consistent. A broad spectrum of literature summarised in a review by Mastrullo et al. \cite{Mastrullo 2010} observes the flow transitioning from single-phase to some form of intermittent flow, then to a broad region of annular flow, then finally to dry out, where it exhibits a dramatic decrease in HTC and thus in cooling efficiency. If the coolant continues to be heated, it reaches mist flow, and its cooling performance continues to plummet. 
-%reduced pressure if it becomes relevant
-%REDUCED PRESSURE
-
-\cite{Mastrullo 2012}. \cite{Mastrullo 2012b}
+\\
+One more important phenomenon to consider is \textit{Reduced Pressure}. Reduced pressure is defined as the ratio of working pressure to critical pressure:
+\begin{eqnarray}
+P_R=\frac{P}{P_{crit}}
+\end{eqnarray}
+Research into this phenomenon is in its infancy. But for now it can be safely said that the further a coolant operates from its critical pressure - the lower its $P_R$, the less predictable its behaviour is with existing theory. \cite{Mastrullo 2012}\cite{Mastrullo 2012b} It seems that a low $P_R$ affects the physics of boiling, making phenomena like HTC and evaporation behaviour difficult to predict.
+\FloatBarrier
 \section{Determining Vapour Quality}
 Literature on direct measurement of vapour quality is scarce, especially for CO$_2$. B.R. Jean presented a steam quality sensor that employs microwaves, yielding an accuracy of 2.8\%. \cite{Jean 2007}. The operating principle relied on the dielectric properties of water. A review of steam quality measurement approaches conducted by Dorman and Fridman \cite{Dorfman 2006} evaluated calorimeter, chemical tracer and flow seperation methods, revealing their significant drawbacks. The authors then presented a new theoretical method for measuring vapour fraction, but it was limited to fluid in a static container. \\
 Void fraction, defined as the volumetric fraction of fluid in the vapour phase, is an intuitive candidate for an inderect measurement of vapour quality. 
@@ -181,51 +201,45 @@ Indeed, several methods have been developed for the measurement of void fraction
 \begin{eqnarray}
 X =\phi\frac{\rho_{vapour}}{\rho_{fluid}}
 \end{eqnarray}
-Empirical relations have been developed, most notably by Zuber and Findaly, between void fraction and vapour quality, but their complexity and limited range makes them impractical for a real-time application.\cite{lecture}.\\
-As mentioned in Section \ref{behaviour}, vapour quality is a common parameter across combinations of mass and heat flux, and it is therefore favoured by researchers in the characterisation of CO$_2$. Research of flow patterns, heat transfer coefficients and 2-phase pressure drops employs vapour quality as a key variable for the visiualisation of data. \cite{Cheng 2008}\cite{Mastrullo 2009a}.\\
-Because the direct measurement of vapour quality is not practical, these researchers have relied on analytically determining vapour quality from test conditions. Most have evaluated the enthalpy of the fluid in a sub-cooled liquid state, before applying a measured heat load. Given the heat load and the mass flow rate, they are able to calculate the corresponding change in enthalpy, giving the 2-phase enthalpy and therefore the vapour quality. \cite{Mastrullo 2009c} \cite{Wu 2011} \cite{Yun 2005} Details of this approach are given in \ref{methods}.
-%analytical methods
+Empirical relations have been developed, most notably by Zuber and Findaly, between void fraction and vapour quality, but their complexity and limited range makes them impractical for a real-time application.\cite{lecture}\\
+As mentioned in Section \ref{behaviour}, vapour quality is a common parameter across combinations of mass and heat flux, and it is therefore favoured by researchers in the characterisation of CO$_2$. Research of flow patterns, heat transfer coefficients and 2-phase pressure drops employs vapour quality as a key variable for the visiualisation of data. \cite{Cheng 2008}\cite{Mastrullo 2009a}\\
+Because the direct measurement of vapour quality is not practical, these researchers have relied on analytically determining vapour quality from test conditions. Most have evaluated the enthalpy of the fluid in a sub-cooled liquid state, before applying a measured heat load. Given the heat load and the mass flow rate, they are able to calculate the corresponding change in enthalpy, giving the 2-phase enthalpy and therefore the vapour quality. \cite{Mastrullo 2009c} \cite{Wu 2011} \cite{Yun 2005} Details of this approach are given in Chapter \ref{methods}.
 \section{2-Phase Performance of Coriolis Flow Meters}
-Coriolis flow meters work by inducing a phase shift in the forced oscillations of two bent tubes using the Coriolis principle. A schematic of the principle is given in figure \ref{fig:coriolis}. As the tubes vibrate at their natural frequency, the velocity of the flow as it is directed radially toward and away from the axis of oscillation in the bent sections induces a phase shift varying linearly with the mass flow rate of the fluid through the instrument. \cite{ISO}\cite{O'Banion 2013}  \\
+\FloatBarrier
+Coriolis flow meters work by inducing a phase shift in the forced oscillations of two bent tubes using the Coriolis principle. A schematic of the principle is given in figure \ref{fig:coriolis}. As the tubes vibrate at their natural frequency, the velocity of the flow as it is directed radially toward and away from the axis of oscillation induces a phase shift varying linearly with the mass flow rate of the fluid through the instrument. \cite{ISO}\cite{O'Banion 2013}  \\
 \begin{figure}
 \includegraphics[width=0.6\textwidth]{coriolis}
 \caption{The working principle of coriolis flow meters.}%find this reference
 \label{fig:coriolis}
 \end{figure}
-
-Density, when independently measured in coriolis flow meters, is typically determined from the resonant frequency of the bent tubes. \cite{ISO}\cite{O'Banion 2013} The frequency is a function of the tube stiffness and mass. So any change in mass reflects a change in density of the fluid inside the tube. The sensor corrects for temperature effects on stiffness and, with a known tube volume, determines the density. \cite{ISO}\\
-Both of these measurement principles can be severely disrupted by 2-phase flow. Entrained gas may create slip planes between the phases, which cause unpredictable forces and vibrations.\cite{ISO}\cite{processArticle}\cite{emerson2Phase} This leads to two problems in instrumentation: first, the unexpected vibrations disturb sensitive electronics. Second, the slip between the phases dampens forced vibrations, possibly stopping the sensor from reading altogether. In a typical coriolis flow meter, the first symptom of entrained gas is the drive gain, the power required to force the tubes' oscillation, rising to 100\%. \cite{ISO}\cite{emerson youtube}\\
-Some manufacturers of process instrumentation have developed products to detect entrained gas. The Emerson Rosemount 3051S Pressure Transmitter, for example, employs statistical methods to detect characteristic frequencies of entrained gas. \cite{emerson EGM}\\
-%2-phase flow meter performance lit review
+\FloatBarrier
+Density, when independently measured in coriolis flow meters, is typically determined from the resonant frequency of the bent tubes. \cite{ISO}\cite{O'Banion 2013} The frequency is a function of the tube stiffness and mass. So any change in frequency reflects a change in the mass of the fluid inside the tube. The sensor corrects for temperature effects on stiffness and then, with a known tube volume, determines the density. \cite{ISO}\\
+Both of these measurement principles can be severely disrupted by 2-phase flow. Entrained gas may create slip planes between the phases, which cause unpredictable forces and vibrations.\cite{ISO}\cite{processArticle}\cite{emerson2Phase} This leads to two problems in instrumentation: first, the unexpected vibrations disturb sensitive electronics. Second, the slip between the phases dampens forced vibrations, possibly stopping the sensor from oscillating altogether. In a typical coriolis flow meter, the first symptom of entrained gas is the drive gain, the power required to force the tubes' oscillation, rising to 100\%. \cite{ISO}\cite{emerson youtube}\\
+Because of the implications of entrained gas, some manufacturers of process instrumentation have developed products to detect it. The Emerson Rosemount 3051S Pressure Transmitter, for example, employs statistical methods to detect characteristic frequencies of entrained gas. \cite{emerson EGM} However, until now, the Optimass 6400 is the first coriolis flow meter that claims to function effectively with 2-phase flow.
+\\
 Because both the mass and density measurements in coriolis flow meters rely on macroscopic properties of the fluid - flow velocity and aggregate density, intermittent flow intuitively seems the most problematic for these instruments. It can be imagined that a sudden pulse of high-velocity gas between normal liquid phases could seriously disrupt sensitive electronics. Indeed, the ISO standard for coriolis meters indicates that they can be used without problems in pure gas-phase flow as well as in homogeneous 2-phase mixtures - an annular flow pattern, for example. \cite{ISO} The obscure industrial research on this topic confirms this trend with many manufacturers stating that annular flow patterns can be measured accurately. \cite{emerson2Phase}\\
 What makes the Optimass 6400 unique is its Entrained Gas Management technology. The meter itself is a copy of the older Optimass 6000, but innovations in the MFC 400 signal converter that it interfaces with set it apart. These electronics employ advanced signal processing and a completely digital drive signal to allow the instrument to continue measuring in 2-phase flow. \cite{krohne brochure}\cite{processArticle}\\
-
-
 
 \chapter{Methods} 
 \label{methods}
 \section{Experimental Methods}
-Laboratory research was carried out using the future CMS pixel detector cooling system located in the Tracker Integration Facility clean room at CERN. This cooling system, hereafter referred to as \textit{TIF}, employs the \textit{2PACL} concept for evaporative CO$_2$ cooling. It allows active control of the coolant temperature, its flow rate and the heat load applied to  it. \\
-\textit{TIF} consists of a membrane pump routing liquid CO$_2$ through a concentric transfer line to a manifold where the flow is split and can be heated. \textit{Dummy Load} heaters represent the detector heat load, evaporating the CO$_2$ in the manifold. An accumulator containing 2-phase fluid on the return line of the manifold regulates the pressure set point using an array of heaters and a heat exchanger. A freon chiller cools the accumulator and the condenser at the pump inlet.\\
-A full Process and Instrumenation Diagram is given in Appendix \ref{app:TIF}.
-\subsection{Apparatus}
-%The TIF room and the future pixel cooling system
-%appendix: TIF P & I
-%plant configuration
-%ADD INSTRUMENT INITIALLY VALIDATED IN LIQUID FLOW
-
+\FloatBarrier
+Laboratory research was carried out using the future CMS pixel detector cooling system located in the Tracker Integration Facility clean room at CERN, pictured in Figure \ref{fig:TIF}. This cooling system, hereafter referred to as \textit{TIF}, employs the \textit{2PACL} concept for evaporative CO$_2$ cooling. It allows control of the coolant temperature, its flow rate and the heat load applied to  it. \\
+TIF consists of a membrane pump routing liquid CO$_2$ through a concentric transfer line to a manifold where the flow is split and can be heated. \textit{Dummy Load} heaters represent the detector heat load, evaporating the CO$_2$ in the manifold. An accumulator containing 2-phase fluid on the return line of the manifold regulates the pressure set point using an array of heaters and a heat exchanger. A chiller circuit cools the accumulator and the condenser at the pump inlet.\\
+A full Process and Instrumenation Diagram is given in Appendix \ref{app:TIF}
 \begin{figure}
 \includegraphics[width=\textwidth]{TIFandHeater.jpg}[h!]
 \caption{The TIF cooling plant[L] and dummy load heater [R]. \cite{tif web}}
 \label{fig:TIF}
 \end{figure}
-
+\FloatBarrier
+\subsection{Apparatus}
 The TIF cooling system services eight cooling loops in the manifold and includes several bypasses, heaters and instrumentation that are mostly relevant to the  start-up procedure. These are configured using a series of pneumatic, manual and electro-mechanical valves. 
 The plant was configured the same way for all tests: with all bypass loops closed, and a single loop, number 7424, open in the manifold. This configuration ensured all fluid leaving the plant passed through this loop and through the Optimass instrument, and allows the experimental apparatus to be represented by a simplified P \& I diagram given in Figure \ref{fig:TIFsimplified}.
 \begin{figure}
 \includegraphics[width=\textwidth]{TIFsimplified.jpg}
 \caption{A simplified process and instrumentation diagram of the TIF cooling plant in the configuration relevant to the tests, displaying only relevant instrumentation. A diagram of the whole TIF if given in appendix \ref{app:TIF}}
-\label{fig:Tifsimplified}
+\label{fig:TIfsimplified}
 \end{figure}
 %instrument physical mounting
 The Optimass instrument was mounted on a test stand close to the \textit{TIF} manifold, as shown in figure \ref{fig:sensor}. Following guidance from Krohne, it was mounted upside-down, with the MFC 400 signal converter closer to the floor. The instrument's discharge was connected through a flexible pipe to the the return lines of loop 7424 in the \textit{TIF} manifold. On the supply side, the instrument was connected directly to the discharge of the heating section. 
@@ -246,23 +260,20 @@ The Optimass instrument was mounted on a test stand close to the \textit{TIF} ma
           %(or a blank line to force the subfigure onto a new line)
           \caption{Photographs of the Optimass sensor connected to the dummy load heating section. The direction of flow is given by the blue arrows.}
 \end{figure}
-%heating section 
-The heating section of loop 7424 consists of a 35 mm OD vertical pipe welded to two tee unions. Two cartridge heater inside 22 mm pipes are axially inserted into the pipe through the tee fittings, as shown in figure \ref{fig:heaters} and in the drawing in Appendix \ref{app:DummyLoad}. The flow enters the heating section radially with respect to the heaters through the lower tee union. It is forced into an anuular shape encircling the heater, and flows upward to the discharge tee-union. It then enters a short unobstructed series of circular fittings before reaching the Optimass instrument. Guidance from Krohne engineers and the instrument documentation indicated that the geometry at the sensor in let was satisfactory.
-%insulation
+\\
+The heating section of loop 7424 consists of a 35 mm OD vertical pipe welded to two tee unions. Two cartridge heater inside 22 mm pipes are axially inserted into the pipe through the tee fittings, as shown in figure \ref{fig:heaters} and in the drawing in Appendix \ref{app:DummyLoad}. The flow enters the heating section radially with respect to the heaters through the lower tee union. It is forced into an anuular shape encircling the heater, and flows upward to the discharge tee-union. It then enters a short unobstructed series of circular fittings before reaching the Optimass instrument. Guidance from Krohne engineers and the instrument documentation indicated that the geometry at the sensor inlet was satisfactory.\\
 The vacuum-insulated instrument, as well as all exposed piping, was covered with a 20 mm layer of \textit{Armaflex} insulation to mitigate heat pick-up. All fittings were leak tested at 50 bar gas using a CO$_2$ sniffer prior to testing, and the instrument's position and inlet conditions respected the guidelines given in Appendix, as well as input from Krohne engineers. 
-
-%Simplified P & I
-%Operational Envelope 
+\FloatBarrier
 \subsection{Control and Data Acquisition}
-All of the instrumentation on the TIF plant, the dummy load and the Optimass flow meter is cabled to a central PLC in the TIF clean room. Each instrument communicates a 4-20 mA analogue signal, which is mapped by the PLC to produce a value in the correct units. All of the data is continuously logged to a server, day and night. The data is logged using a change or duration algorithm - logging new data only when one of the signals has changed. This produces a sampling rate of several Hz during transient conditions - meaning hundreds of thousands of data points over the 3-week test campaign.
-The Optimass sensor was configured by Krohne Italy to deliver mass flow, density and temperature signals through a 4-20 mA bus in the following measurement ranges:\\
+All of the instrumentation on the TIF plant, the dummy load and the Optimass flow meter is cabled to a central PLC in the TIF clean room. Each instrument communicates a 4-20 mA analogue signal, which is mapped by the PLC to produce a value in the correct units. All of the data is continuously logged to a server, day and night. The data is logged only when one of the signals has changed. This produces a low sampling rate at stable conditions, but several Hz during transient conditions - meaning hundreds of thousands of data points over the 3-week test campaign.
+The Optimass sensor was configured by Krohne Italy to deliver mass flow, density and temperature as 4-20 mA signals in the following measurement ranges:\\
 \begin{itemize}
 \item{Mass Flow Rate: 1.4-115 gs$^{-1}$} 
 \item{Density: 100.6 - 1100 kgm$^{-3}$}
 \item{Temperature: -40 - +40 $^\circ$C}
 \end{itemize}
 The sensor was cabled to the same PLC controlling TIF and logging all of its instrumentation, and the signals were mapped to the values configured by Krohne. This approach streamlined control and post-processing by consolidating the plant, heaters and instrument on a single Scada interface, and logging the data in a single location at common timesteps. 
-\subsection{Variables and Assumptions}
+\subsection{Key Variables}
 The instrument's performance was to be assessed in relation to three independent variables:
 \begin{itemize}
 \item{Coolant temperature - regulated by the accumulator set point.}
@@ -270,13 +281,14 @@ The instrument's performance was to be assessed in relation to three independent
 \item{Heat Load - set by the heaters' rms current.}
 \end{itemize}
 The coolant temperature set point determines the position along the vapour dome on a P-h diagram of the 2PACL cycle, and therefore the local pressure in the instrument. This influences the evaporative behaviour of the coolant, as well as the vapour quality for a given density. While a wide range of temperature was to be explored, the invariance of the temperature during a tests was an essential control variable. \\
-The mass flow rate was set by the speed and stroke of the pump, but not regulated during tests. This meant that as the vapour quality of the coolant increased, the resultant increase in pressure drop decreased the effective flow rate for given pump conditions. The resulting fluctuations in true flow rate affect the trends plotted by nominal flow rate, but because flow rate is measured in real time, they did not effect error signal calculations.\\
+The mass flow rate was set by the speed and stroke of the pump, but not regulated during tests. This meant that as the vapour quality of the coolant increased, the resulting increase in pressure drop decreased the effective flow rate for given pump conditions. The resulting fluctuations in true flow rate affect the trends plotted by nominal flow rate, but because flow rate is measured in real time, they did not effect error signal calculations.\\
 The dummy load heaters are resistive cartridge heaters, whose power is controlled by pulse width modulation. The user specifies a Watt value on the Scada interface, and the PLC applies the correct PWM signal to achieve the demand power output. Heater control is open-loop, but their performance has been validated in the past. %????
 \\
 A broad range of all three variables was explored. But because this experiment sought only to evaluate steady-state performance, transient data was to be minimised. The control variables were therefore closely monitored to minimise fluctuations. 
 \subsection{Test Protocol}
+\FloatBarrier
 Before beginning 2-phase testing, the instrument's calibration was validated in pure liquid by comparing its readings of mass flow, density and temperature with a reference instrument on the plant (FT3020) for a range of flow rates and temperatures.\\
-For 2-phase testing, a test protocol was developed to ensure consistency of data. A change to any of the independent variables caused a significant transient response. But the process of fine-tuning the values and waiting for their response to settle differed for each variable. Tests were designed accordingly.\\\\
+For 2-phase testing, a test protocol was developed to ensure consistency of data. A change to any of the independent variables caused a significant transient response. But the process of fine-tuning the values and waiting for their response to settle differed for each variable. Tests were designed accordingly.\\\\\FloatBarrier
 \begin{center}
 \begin{table}
 \begin{tabular}{|l|l|l|l|}
@@ -291,10 +303,10 @@ Vapour Quality & Dummy Load Power & 5-15 minutes\\\hline
 \label{tab:settle}
 \end{table}
 \end{center}
+\FloatBarrier
 Altering test conditions employed a nested approach. First, the coolant temperature was set in the accumulator. Then various heat loads were applied at a given pump speed to explore a range of vapour qualities at a given flow rate, before changing the pump conditions. A typical test segment: various heat loads at a given flow rate and temperature, is shown in Figure \ref{fig:typicalTest}. 
 \FloatBarrier
 \begin{figure}
-%EDIT THIS PICTURE FOR CONSTANT TEMPERATURE
 \includegraphics[width=\textwidth]{typicalTestEdited}
 \caption{A typical test. The steps in heat load are shown as vertical red lines.}
 \label{fig:typicalTest}
@@ -303,15 +315,26 @@ After observing steady state conditions, the timestamp for these conditions was 
 \FloatBarrier
 \section{Data Analysis Methods} \label{analysis}
 A method, summarised in Figure \ref{fig:processing}, was devised for the export, pre-processing and process of data. This approach filtered through the hundreds of thousands of data points to reach a small subset of steady-state data during test conditions. 
-
 \begin{figure}
 \includegraphics[width=\textwidth]{processing}
 \caption{A summary of data processing and analysis.}
 \label{fig:processing}
 \end{figure}
-
+\FloatBarrier
+\subsection{Assumptions}
+The data processing and analysis rests on a series of assumptions at steady-state conditions, including:
+\begin{itemize}
+\item{Flow is fully liquid at the manifold inlet to allow calculation of inlet enthalpy - h$_3$ - from the inlet pressure and temperature. This is ensured by high degree of sub-cooling at the pump suction line, as well as the REFPROP model used to make the calculation - it would throw an error if it detects 2-phase conditions.See Section \ref{analysis} for details.}
+\item{All thermodynamic processes outside the dummy load heating section are adiabatic. Heat pick up in the insulated manifold, vacuum insulated instrument and Armaflex-insulated flexible pipes is negligible relative to the heat load being applied by the dummy load.}
+\item{All power provided by the heaters is a power input to the coolant. This assumption is strengthened by the fact that data of interest occurs at steady-state conditions, when the entire thermal apparatus - the heaters, the air and piping surrounding them and the boundary layer on their interfacing pipe - are in equilibrium.}
+\item{The open-loop-controlled heaters deliver the exact power requested by the user.}
+\item{Accumulator set point temperature, and therefore the coolant temperature, are constant at the desired set point. The accumulator is PID controlled, but the response of the controller is slow enough to allow temperature fluctuations in the order of 5$^\circ$C. In addition, at high flow rates and vapour qualities there is a significant pressure drop between the Optimass 6400 inlet and the accumulator. The result is a significant temperature difference between the accumulator and the coolant in the Optimass instrument.}
+\item{Physical inlet geometry is satisfactory for the effective functioning of the instrument. Potential effects like inlet swirl and turbulence are assumed negligible, despite the sudden change in inlet geometry.}
+\item{Nominal flow rate set by the pump speed and stroke is constant. In fact, this flow rate varies with changing pressure drop due to vapour quality. This results in variations of nominal flow rate in the order of 5 gs$^{-1}$}
+\end{itemize}
 \subsection{Export Pre-Processing} %database management, steady-state filtering
 Including time, 12 signals out of the dozens logged in the PLC were identified as being key for this study. These are summarised in table \ref{tab:keySignals}.\\
+\FloatBarrier
 \begin{center}
 \begin{table}
 \begin{tabular}{ |c|c|c|l| }
@@ -332,18 +355,22 @@ Reference & PT7450 & $P_5'$ & Pressure at instrument discharge. \\\hline
 \label{tab:keySignals} 
 \end{table}
 \end{center}
+\FloatBarrier
 A page of plots tracking these signals was created in the Scada interface. Then, \textit{.csv} data for each signal was exported by navigating to the time of a given test and exporting a 4 hour window of data. These \textit{.csv} files for each day of testing were then pre-processed using modified MATLAB scripts inhereted from Bart Verlaat at Nikhef. These consolidate the data from each test into a single database - handling empty cells and overlapping timesteps, and saving the cleaned data in a new database to be called by MATLAB.
-\subsection{Steady-state Handling}
-The raw data in the database was filtered to plot only steady state data. The architecture for this procedure combined the user-identified steady state timestamps with an algorithm assessing noise later in time. While timestamps indicated nominally steady-state data for one minute, the imperfect method of a user identifying steady state conditions and deciding when to change test conditions necessitated a more robust approach. Starting at the timestamp indicating steady state, the script moves forward through the index of each data vector, calculating its current mean value, the mean of the next 3 indexes, and the deviation of the future value from the current one. If the deviation falls within allowable noise levels, the script continues collecting steady-state data. IF the timestamps reach 30 seconds difference, the script terminates - 30 seconds is the maximum sample. At the end of each loop through a steady-state time stamps, all the steady state values are averaged into a single value representing the whole sample. This is implemented in the script \textit{createTimeFilter3} given in Appendix \ref{app:Matlab} 
+\subsection{Steady-State Filtering}
+The raw data in the database was filtered to plot only steady state data. The architecture for this procedure combined the user-identified steady state timestamps with an algorithm measuring signal fluctuations going forward in time. While timestamps indicated nominally steady-state data for one minute, the imperfect method of a user identifying steady state conditions and deciding when to navigate to a new data point necessitated a more robust approach. \\Starting at the timestamp indicating steady state, the script moves forward through the index of each data vector, calculating its current mean value, the mean of the next 3 indexes, and the deviation of the future value from the current one. If the deviation falls within allowable noise levels, the script continues collecting steady-state data. IF the timestamps reach 30 seconds difference, the script terminates - 30 seconds is the maximum sample. At the end of each loop through a steady-state time stamps, all the steady state values are averaged into a single value representing the whole sample. This is implemented in the script \textit{createTimeFilter3} given in Appendix \ref{app:Matlab} 
 \subsection{Data Processing and Visualisation}
-With the key signals filtered to leave only steady state conditions, these were processed to assess the sensor's performance. The sensor was evaluated by comparing its readings to a combination of reference instrumentation and analytically computed reference conditions. \\
-%REFPROP mentioned here
-Analysis employed an theoretical MATLAB model to compute thermodynamic state variables in the sensor, and called a refrigerant simulation program called REFPROP to compute the local conditions of interest. %refrigerant simulation??\\
-REFPROP, developed by National Instruments, is a widely used program that simulates refrigerant performance using a combination of analytical and empirical methods. %true??
+With the key signals filtered to leave only steady state conditions, these were processed to assess the sensor's performance. The sensor was evaluated using a combination of reference instrumentation, give in Table \ref{tab:keySignals}. Mass flow measurmements were compared to a reference instrument - FT3020 - while density and resulting vapour quality were compared with analytically computed reference conditions.\\
+These calculatoins employed a theoretical MATLAB model to compute thermodynamic state variables in the sensor, and called a refrigerant modelling program called REFPROP to compute the local conditions of interest. 
+Developed by National Instruments, REFPROP stands for Reference Fluid Thermodynamic and Transport Properties Database. It is the industry standard for calculating thermodynamic properties of refrigerants. \cite{REFPROP}
 \subsection{Calculation of Reference Conditions}
-The local density and vapour quality in the Optimass sensor were calculated using the local pressure and specific enthalpy. 
-%juxtapose pure liquid and 2-phase approaches to determining position in P-h
-A pressure and an enthalpy give the fluid's exact location in the vapour dome, and the vapour quality and density can be read from the chart, as shown in Figure \ref{enthalpyMethod}. This was implemented using REFPROP. With the following syntax: \\\\
+\FloatBarrier
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{enthalpyMethod.jpg}
+\caption{The analytic model for calculating local 2-phase conditions at the flow meter.}
+\label{fig:enthalpyMethod}
+\end{figure}
+The reference density and vapour quality in the Optimass sensor were calculated using the local pressure and specific enthalpy. A pressure and an enthalpy give the fluid's exact location in the vapour dome, and the vapour quality and density can be read from the chart, as shown in Figure \ref{enthalpyMethod}. This was implemented using REFPROP. With the following syntax: \\\\
 \textit{Q = refpropm('Q','P',$<P_5$ [kPa]$>$ , 'H', $<h_5$ [J/kg]$>$ , 'CO2')} \\\\
 The local enthalpy at the sensor, \textit{$h_5$}, is given by the sum of the manifold inlet enthalpy, $h_3$ and the change in enthalpy due to the heat load, $\Delta$h.\\
 \textit{$h_3$} was determined with REFPROP from the inlet manifold inlet conditions (Pressure and Temperature in pure liquid), while the change in enthalpy was calculated from the heat load and reference mass flow rate.\\\\
@@ -352,25 +379,23 @@ p = Heat Load [W]\\
 \begin{eqnarray}
 \Delta h=\frac{p}{\dot{m}}
 \end{eqnarray}
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{enthalpyMethod.jpg}
-\caption{The analytic model for calculating local 2-phase conditions at the flow meter.}
-\label{fig:enthalpyMethod}
-\end{figure}
-\section{Calculation of Vapour Phase Velocity}
-The vapour phase veloicty is a relevant parameter to flow meter performance, representing the linear velocity of the vapour phase in the pipe. The VPV depends both on the vapour quality  and the density of the vapour phase, which in turn varies with the saturation conditions.\\
+\FloatBarrier
+Since there is no reliable measure of pressure at the senor inlet, the local pressure is inferred from the saturation pressure at the temperature measured in the Optimass sensor: TT7424.
+\subsection{Calculation of Vapour Phase Velocity}
+The vapour phase velocity is a relevant parameter to flow meter performance, representing the linear velocity of the vapour phase in the pipe. The VPV depends both on the vapour quality  and the density of the vapour phase, which in turn varies with the saturation conditions.\\
+Recalling equation \ref{eq:VPV}:
 \begin{eqnarray}
 X=\frac{\dot{m}_{vap}}{\dot{m}_{fluid}}\\
-VSV[ms^{-1}]=\frac{\dot{m}X}{\rho_{vap}CSA} \\
+VSV[ms^{-1}]=\frac{\dot{m}X}{\rho_{vap}A} \\
 \end{eqnarray}
-The difficulty here is determining the vapour phase density from the aggregate density, but this problem was handled with REFPROP:\\
+The difficulty here is determining the vapour phase density from the aggregate density, but this was handled with REFPROP:\\
 $\rho_{vap}$=refpropm('-','Q',$<$Vapour Quality$>$,T,$<$Saturation Temperature [$^\circ$C]$>$,'CO2');
 
 \chapter{Results} \label{results}
 Because of the size of the raw data spread over weeks of testing and the focus of this study on steady-state conditions, the results presented below summarise the sensor's performance by examining measurement errors under various conditions. The key parameters have been defined as the relative flow rate measurement error, and the relative density measurement error. Vapour quality has been adopted as a common parameter to plot performance against, as is common in the research discussed in Chapter \ref{litReview}.
 \section{Overview}
 \FloatBarrier
-Figures \ref{plot:1} and \ref{plot:2} give an overview of the flow meter's performance in all the conditions tested by plotting relative flow and density errors across a range of vapour qualities. The mass flow errors are largely negative, varying from 0-100\% and displaying a non-linear relation to vapour quality. The density errors also vary widely, but, for some conditions, their sign changes with vapour quality. The instrument appears to underestimate density in low vapour qualities, and overestimate it at high qualities.\\
+Figures \ref{plot:1} and \ref{plot:2} give an overview of the flow meter's performance in all the conditions tested by plotting relative flow and density errors across a range of vapour qualities. The mass flow errors are largely negative, their magnitude varying from 0-100\% and displaying a non-linear relation to vapour quality. The density errors also vary widely, but, for some conditions, their sign changes with vapour quality. The instrument appears to underestimate density in low vapour qualities, and overestimate it at high qualities.\\
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig1}
 \caption{An overview of relative mass flow error against vapour quality.}
@@ -392,23 +417,21 @@ Controlling for one of the test conditions refines the data, and reveals two int
 \FloatBarrier
 \section{Mass Flow Trend}
 \FloatBarrier
-Plotting the relative errors against vapour quality at a single temperature but various flow rates, as in figures \ref{plot:3} and \ref{plot:4}, reveals a clear relation between instrument performance and nominal flow rate. The trends in Figure \ref{plot:3}, which plots performance for various flow rates at -10$^\circ$C, show the absolute magnitude of the mass flow error across the entire range of vapour quality increasing with nominal mass flow rate. \\
-In addition, at higher nominal flow rates the magnitude of the mass flow error appears to peak at certain vapour qualities, the peak tending toward dryer fluid as nominal flow rate increases. Both these relations: mean value of the mass flow error, and vapour quality at the peak error can not be immediately explained by the theory. However, two potential explanations are the flow pattern and the vapour phase velocity (VPV)under these conditions. These two parameters have been calculated for the flow conditions at each of the peak mass flow errors, and are summarised in Table \ref{tab:flowConditions}. The method for these calculations is discussed in Section \ref{analysis}.\\ 
+Plotting the relative errors against vapour quality at a single temperature but various flow rates, as in figures \ref{plot:3} and \ref{plot:4}, reveals a clear relation between instrument performance and nominal flow rate. The trends in Figure \ref{plot:3}, which plots performance for various flow rates at -10$^\circ$C, show the absolute magnitude of the mass flow error across the entire range of vapour quality increasing with nominal mass flow rate. \\ \FloatBarrier
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig3}
-\caption{Relative mass flow error for several nominal flow rates at -10$^\circ$C.}
+\caption{Relative mass flow error for several nominal flow rates at -10$^\circ$C.The method for these calculations is discussed in Section \ref{analysis}.}
 \label{plot:3}
 \end{figure}
-The density errors displayed in Figure \ref{plot:4} also demonstrate an improvement in sensor performance as the nominal flow rate decreases. But it appears the relation is more complex than for mass flow error.
-
-%two subplots: peak VQ and area under graph against VQ
 
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig4}
 \caption{Relative mass flow error for several nominal flow rates at -10$^\circ$C.}
 \label{plot:4}
 \end{figure}
-
+\FloatBarrier
+In addition, at higher nominal flow rates the magnitude of the mass flow error appears to peak at certain vapour qualities, the peak tending toward dryer fluid (higher X) as nominal flow rate increases. Both these relations: mean value of the mass flow error, and vapour quality at the peak error can not be immediately explained by the theory. However, two potential explanations are the flow pattern and the vapour phase velocity under these conditions. These two parameters have been calculated for the flow conditions at each of the peak mass flow errors, and are summarised in Table \ref{tab:flowConditions}. The density errors displayed in Figure \ref{plot:4} also demonstrate an improvement in sensor performance as the nominal flow rate decreases. But it appears the relation is more complex than for mass flow error.
+\FloatBarrier
 \begin{table}
 \begin{tabular}{|c|c|c|c|c|}
 \hline\\
@@ -420,19 +443,19 @@ gs$^{-1}$ &  & kgm$^{-2}$s$^{-1}$ & & ms$^{-1}$\\\hline
 70 &0.366 & 696 & Annular & 3.90 \\\hline
 80 &0.346 & 796 & Annular & 3.91 \\\hline
 90 &0.293 & 895 & Annular & 3.57 \\\hline
+105 & 0.233 & 1037 & Annular & 3.44 \\\hline
 \end{tabular}
 \caption{Flow conditions at peak mass flow errors in \ref{plot:3}}
 \label{tab:flowConditions}
 \end{table}
+\FloatBarrier
 Because flow rate is a first order factor of VPV, this velocity generally increases with nominal flow rate for a given vapour quality, as shown in Figure \ref{gasVelocity}.
-%GAS VELOCITY PLOT
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig12}
 \caption{Velocity of the vapour phase against vapour quality for various mass flow rates.}
 \label{gasVelocity}
 \end{figure}
 
-%Table: peak error flow pattern.
 \FloatBarrier
 \section{Temperature Trend}
 %Temperature TREND***********************
@@ -449,8 +472,9 @@ A second trend is observable in the data when relative errors-vapour quality rel
 \caption{Relative density error for several temperatures at 70 gs$^{-1}$ nominal flow rate.}
 \label{plot:6}
 \end{figure}
-This trend is also visible at lower flow rates, albeit in a less pronounced way. The lower nominal flow rates already exhibit better overall performance  but, as shown in figures \ref{plot:7} and \ref{plot:8}, the repeatability of their errors across a range of vapour qualities decreases with coolant temperature.\\
-As with the nominal mass flow rate relation, there is no immediate explanation for the temperature trend. It can be speculated that the so called \textit{reduced pressure} plays a role. This possibility is discussed in Chapter \ref{discussion}. 
+\FloatBarrier
+This trend is also visible at lower flow rates, albeit in a less pronounced way. The lower nominal flow rates already exhibit better overall performance  but, as shown in figures \ref{plot:7} and \ref{plot:8}, the gradient of their errors with respect to vapour quality decreases with coolant temperature.\\
+As with the nominal mass flow rate relation, there is no immediate explanation for the temperature trend. It can be speculated that \textit{reduced pressure} plays a role. This possibility is discussed in Chapter \ref{discussion}. \FloatBarrier
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig7}
 \caption{Relative mass flow error for several temperatures at 30 gs$^{-1}$ nominal flow rate.}
@@ -462,9 +486,7 @@ As with the nominal mass flow rate relation, there is no immediate explanation f
 \caption{Relative mass flow error for several temperatures at 30 gs$^{-1}$ nominal flow rate.}
 \label{plot:8}
 \end{figure}
-
-%VQ ERROR
-%30 grams, various temps
+\FloatBarrier
 When expressed in terms of vapour quality measurement errors, the performance of the sensor is encouraging at low flow rates. At 30 gs$^{-1}$ and 20 gs$^{-1}$, summarised in figures \ref{plot:9} and \ref{plot:10}, the vapour quality error falls within 20\%, and decreases with true vapour quality.
 \begin{figure}
 \includegraphics[width=\textwidth]{plots/fig9}
@@ -479,27 +501,29 @@ When expressed in terms of vapour quality measurement errors, the performance of
 \end{figure}
 \chapter{Discussion} \label{discussion}
 \section{Overview}
-The bulk of results agreed with the intuitive expectations outlined in Chapter \ref{litReview}. While the Optimass 6400 succeeds in continues measurement of 2-phase flow, its performance is unpredictable. Flow and density measurements are complex, and their accuracy seems to depend on temperature, vapour quality and mass flow rate with relations that cannot be readily consolidated into a single theory, given the current literature.\\
-While the data is broadly spread, the test method has been broadly validated by its repeatability, and data has been collected strategically to fulfill the original objectives: evaluate a broad performance envelope, identify trends of interest, and conduct further testing to evaluate their repeatability.\\
-In this way, three interesting trends have been identified - at least one of them immediately useful to the potential users of the instrument. First, the measurement accuracy of the instrument of both mass flow rate and density improves as the flow rate is reduced. For the lowest flow rates: 20 and 30 gs$^-1$, the mass flow measurement error magnitude falls within 25\%, and within 10\% at 20 gs$^-1$. As for density measurement at low flow rates, the instrument's performance is potentially practical for its intended use of estimating vapour quality. At 20 gs$^-1$, the vapour quality measurement error (using the measured density and reference flow rate)  decays to less than 10\% for vapour qualities greater than 28\%. While the error reaches 40\% for low vapour qualities, it is at high vapour qualities, close to dry-out, that accuracy is valued. The fact that the instruments accuracy improves to 10\% towards the dry side of the vapour means it may perform well enough to be of interest to CERN.\\
+The results reflect some of the intuitive expectations outlined in Chapter \ref{litReview}. While the Optimass 6400 succeeds in continues measurement of 2-phase flow, its performance is unpredictable. Flow and density measurements are complex, and their accuracy seems to depend on temperature, vapour quality and mass flow rate with relations that cannot be readily consolidated into a single theory, given the current literature.\\
+While the data is broadly spread, the test method has been validated by its repeatability, and data has been collected strategically to fulfill the original objectives: evaluate a broad performance envelope, identify trends of interest, and conduct further testing to evaluate their consistency.\\
+In this way, three interesting trends have been identified - at least one of them immediately useful to the potential users of the instrument. \\First, the measurement accuracy of the instrument of both mass flow rate and density improves as the flow rate is reduced. For the lowest flow rates: 20 and 30 gs$^-1$, the mass flow measurement error magnitude falls within 25\%, and within 10\% at 20 gs$^-1$. As for density measurement at low flow rates, the instrument's performance is potentially practical for its intended use of estimating vapour quality. At 20 gs$^-1$, the vapour quality measurement error (using the measured density and reference flow rate)  decays to less than 10\% for vapour qualities greater than 28\%. While the error reaches 40\% for low vapour qualities, it is at high vapour qualities, close to dry-out, that accuracy is valued. The fact that the instruments accuracy improves to 10\% towards the dry side of the vapour means it may perform well enough to be of interest to CERN.\\
 \section{Mass Flow Rate Trend}
-The data also demonstrated a second correlation. At -10$^\circ$, the set point with sufficient flow rates, a clear positive relation between mean value of relative mass flow error and nominal mass flow rate was observed. In addition, the non-linear mass flow error peaked as a function of vapour quality, with the peaks tending dryward with decreasing flow rate. Given the literature on coriolis flow meter performance in 2-phase, a tempting explanation was the occurence of a flow pattern transition at this point. To test this, the flow conditions at each of the peak mass flow errors in Figure \ref{plot:3} were tabulated in Table \ref{tab:flowConditions}, and their corresponding vapour quality and mass flux were plotted on a Cheng flow pattern map \cite{cheng 2008}. This revealed that the mass flow error peaks occur at a vapour quality in the order of 10 percentage points greater than the flow pattern transition between intermittent and annular flow predicted by Cheng. In addition, this theory would not explain the dry-ward tendency of the vapour quality at peak mass flow errors with decreasing flow rate.\\
-In response, a second theory for the mass flow trend was explored: the role of vapour phase velocity. Using a MATLAB function calling REFPROP, vapour phase velocities were calculated for the flow conditions at each peak mass flow error and tabulated in Table \ref{tab:flowConditions}. The flow velocities for the peak mass flow rates formed a tight group around 3.5 ms$^{-1}$, with a standard deviation of: . Given the inexact location of the data points used to approximate the true peaks, this was interpreted as strong evidence that the mass flow error behaviour was due to vapour phase velocity. As shown in Figure \ref{gasVelocity}, the vapour phase velocity accelerates with nominal mass flow rate at a given vapour quality, which could explain the increasing magnitude of the mean value of relative mass errors. But crucially,the tight group of vapour phase velocities indicate that the error peaks at a critical velocity, and decays afterward. Because mass flow rate and vapour quality are first order factors of VPV, the VPV reaches critical velocity at a higher vapour quality for a lower mass flow rate. Recall equation ???. This would also explain why the lower nominal mass flow rates do not exhibit a peak error - their VPVs never reach the critical value. As shown in Figure \ref{gasVelocity}, the lower mass flow rates do not sufficiently accelerate the vapour phase to reach critical velocity.
+The data also demonstrated a second correlation. At -10$^\circ$ temperature set point with sufficient flow rates, a clear positive relation between mean value of relative mass flow error and nominal mass flow rate was observed, as shown in Figure \ref{plot:3}. In addition, the non-linear mass flow error peaked as a function of vapour quality, with the peaks tending dryward with decreasing flow rate. Given the literature on coriolis flow meter performance in 2-phase, a tempting explanation was the occurence of a flow pattern transition at this point. To test this, the flow conditions at each of the peak mass flow errors in Figure \ref{plot:3} were calculated and displayed in Table \ref{tab:flowConditions}, and their corresponding vapour quality and mass flux were evaluated on a Cheng flow pattern map \cite{Cheng 2008}. This revealed that the mass flow error peaks occur at a vapour quality in the order of 10 percentage points greater than the flow pattern transition between intermittent and annular flow predicted by Cheng. In addition, this theory would not explain the dry-ward tendency of the vapour quality at peak mass flow errors with decreasing flow rate.\\
+In response, a second theory for the mass flow trend was explored: the role of vapour phase velocity. Using a MATLAB function calling REFPROP, vapour phase velocities were calculated for the flow conditions at each peak mass flow error and tabulated in Table \ref{tab:flowConditions}. The flow velocities for the peak mass flow rates formed a tight group with mean = 3.44 ms$^{-1}$, $\sigma$ = .245 ms$^{-1}$ and maximum deviation = 0.277 ms$^{-1}$ or 7.5\%. Given the inexact location of the data points used to approximate the true peaks, this was interpreted as strong evidence that the mass flow error behaviour was due to vapour phase velocity. As shown in Figure \ref{gasVelocity}, the vapour phase velocity accelerates with nominal mass flow rate at a given vapour quality, which could explain the increasing magnitude of the mean value of relative mass errors. But crucially, the group of vapour phase velocities indicate that the errors peak at a critical velocity, and decay with further acceleration. Because mass flow rate and vapour quality are first order factors of VPV, the VPV reaches critical velocity at a higher vapour quality for a lower mass flow rate. Recall equation ???. This would also explain why the lower nominal mass flow rates do not exhibit a peak error - their VPVs never reach the critical value. As shown in Figure \ref{gasVelocity}, the lower mass flow rates do not sufficiently accelerate the vapour phase to reach critical velocity.
 \section{Temperature Trend}
-%gas phase flow rate. reduced pressure. undersized instrument. 
+%reduced pressure
+The third trend identified in the flow meter's performance was an improvement in measurement accuracy of both mass flow and density with increasing coolant temperature. The trend is visible in figures \ref{plot:5}, \ref{plot:6}, \ref{plot:7} and \ref{plot:8}, which show errors at constant nominal flow rate for various coolant temperatures. \\
+The improvement in temperature cannot readily be explained by the theory, but it is speculated that P$_R$, the reduced pressure, is playing a role. As discussed in Chapter \ref{litReview}, the reduced pressure decreases with decreasing coolant temperature, making predictions of evaporative behaviour more difficult. This phenomenon could be impacting the accuracy of the flow meter's mass flow performance. In the case of density, it could be affecting the sensor, the theoretical model used to calculate reference conditions, or both.
 \section{Errors and Uncertainty}
 The experimental method exhibited sufficient accuracy to deliver clear, repeatable results over a wide range of test conditions. However, the nature of the apparatus limit the relevance of the findings to a prelimenary overview of the Optimass instrument's performance. A direct specification of the error bars on the findings is impractical due to the many layers of filtering and analysis, and the assumptions inherent in the physical methodology. TIF is not a laboratory test bench, but a large, operational cooling system. There were significant limitations on the apparatus, including:
 \begin{itemize}
 \item{The chiller that cools the accumulator and condenser requires a heat load of at least 3 kW on the system to function effectively, depending on the temperature set point. This makes testing at low flow rates and temperatures at the edges of the plant's envelope difficult. Low flow rates require very low heat loads for a broad range of vapour quality without dry out. And due to environmental heat leak, low temperatures tend to overload the chiller while high ones cause it to overheat.}
-\item{Accumulator temperature set point regulation is PID controlled, and responds slowly enough that nominally steady-state data includes temperature fluctuations up to 1 $^\circ$C.}
-\item{The nominal flow rate lacks any control system. It was set by adjusting the speed and stroke of the pump and waiting for the transient response to settle. A change in vapour quality changes the pressure drop and therefore the system characteristic, resulting in flow rate fluctuations in the order fo 5 gs$^{-1}$. All error signals and reference conditions are calculated using the real-time reference flow rate [FT3020], so this error is only in \textit{nominal} flow rate, i.e. flow trends on the plots.}
-\item{The inlet pressure at the instrument is a crucial parameter affecting the calculation of reference vapour quality and density. However, the sensor inlet lacks instrumentation. Instead, the pressure in the sensor is assumed to equal the saturation pressure of the temperature measured inside the sensor [TT7424]. Since the flow is 2-phase, it is fair to assume that the saturation pressure is equal to the local pressure. However, a pressure-drop on the inlet side of the instrument would result in an underestimate of true inlet pressure. Krohne specifies a liquid pressure drop in the order of mbar, even at a high flow rates. But there is no data on 2-phase pressure drop, which the literature shows is far higher.}
+\item{The accumulator temperature set point is PID controlled, and responds slowly enough that nominally steady-state data includes temperature fluctuations up to 1 $^\circ$C.}
+\item{The nominal flow rate lacks any control system. It was set by adjusting the speed and stroke of the pump and waiting for the transient response to settle. A change in vapour quality changes the pressure drop and therefore the system characteristic, resulting in flow rate fluctuations in the order of 5 gs$^{-1}$. All error signals and reference conditions are calculated using the real-time reference flow rate [FT3020], so this error is only relevant for \textit{nominal} flow rate, i.e. flow trends on the plots.}
+\item{The inlet pressure at the instrument is a crucial parameter affecting the calculation of reference vapour quality and density. However, the sensor inlet lacks instrumentation. Instead, the pressure in the sensor is assumed to equal the saturation pressure of the temperature measured inside the sensor [TT7424]. Since the flow is 2-phase, it is fair to assume that the saturation pressure is equal to the local pressure. However, a pressure-drop on the inlet side of the instrument would result in an underestimate of true inlet pressure. Krohne specifies a liquid pressure drop in the order of mbar, even at a high flow rates. But there is no data on 2-phase pressure drop, which the literature shows is far higher.\cite{Mastrullo 2010}}
 \end{itemize}
 The collective effect of these uncertainties is a study that characterises the overall performance of the Optimass instrument, and demonstrates under which conditions it performs best. While the errors measured are repeatable, the nature of the apparatus means that they are not a reliable measure of the sensor's accuracy under laboratory conditions. As a result, this study is largely a stepping tone: showing the viability of the approach to vapour quality measurement, the conditions underwhich this particular instrument's performance is satisfactory, and areas for futher research.
 \chapter{Conclusions}
-This study has validated the concept of determining vapour quality from 2-phase density, and has broadly characterised the performance of the Optimass 6400 for this purpose. The data evaluated mass flow and density measurement accuracy, and its ultimate effect on vapour quality measurment, at different vapor qualities for a range of coolant temperatures between -20 and +10 $^\circ$C and nominal flow rates between 20 and 105 gs$^{-1}$. The overall performance of the instrument was, while repeatable, demonstrably unpredictable and far from satisfactory at high flow-rates and low temperatures. Measurement errors up to 100\% were observed at high nominal flow rates. However, mass flow and density accuracy in the low flow rates fell within the range of 25\%, giving vapour quality estimation errors in the order of 10\% under certain test conditions - accurate enough to be of interest to CERN.\\
+This study has validated the concept of determining vapour quality from 2-phase density, and has broadly characterised the performance of the Optimass 6400 for this purpose. The data evaluated mass flow and density measurement accuracy, and its ultimate effect on vapour quality measurment, at different vapor qualities for a range of coolant temperatures between -25 and +5 $^\circ$C and nominal flow rates between 20 and 105 gs$^{-1}$. The overall performance of the instrument was, while repeatable, demonstrably unpredictable and far from satisfactory at high flow-rates and low temperatures. Measurement errors up to 100\% were observed at high nominal flow rates. However, mass flow and density accuracy in the low flow rates fell within the range of 25\%, giving vapour quality estimation errors in the order of 10\% under certain test conditions - accurate enough to be of interest to CERN.\\
 Besides performance improving at lower nominal flow rates, the data also demonstrated a series of peaks in the absolute value of mass flow error, which move dry-ward as the flow rate is lowered. Evaluating the flow conditions at these points showed that they are most likely the result of the vapor phase velocity reaching a critical value of about 3.?? ms$^-1$, SD= ??. This was further confirmed by the fact that mass flow errors at lower flow rates, whose vapour phase velocities never reach this critical value, do not exhibit a peak error. Vapour phase velocity is known to be a critical parameter in dimensioning coriolis flow meters. If the excessive vapour phase velocity is the cause of the larger flow rate errors, this would indicate that the instrument is undersized for its application.\\
-Finally, flow meter performance appeared to improve with coolant temperature. No immediate explanation for this trend was found, but it is speculated that \textit{reduced pressure} plays a role. Research of this parameter - the ratio of the cooling cycle's operating pressure to its ?? pressure, is in its infancy. But so far it has demonstrated that the physics of boiling becomes unpredictable at low reduced pressures, which could explain the greater flow and density erros at these pressures - they could be due to errors in the reference conditions or in the measurements themselves.\\
+Finally, flow meter performance appeared to improve with coolant temperature. No immediate explanation for this trend was found, but it is speculated that \textit{reduced pressure} plays a role. Research of this parameter - the ratio of the cooling cycle's operating pressure to its critical pressure, is in its infancy. But so far it has demonstrated that the physics of boiling is unpredictable at low reduced pressures, which could explain the greater flow and density errors at these pressures - they could be due to errors in the reference conditions or in the measurements themselves.\\
 Overall, this study provides an overview of the performance of the Optimass 6400, and has served to identify areas for further research. These are discussed below.
 \chapter{Future Work} \label{further research}
 The promising performance of the Optimass 6400 at low flow rates makes this a clear target for further research. While the present apparatus made flow rates below 20gs$^{-1}$ unsustainabale, an expected modification to the apparatus in May 2015 will allow a broader range of all test parameters to be explored. Indeed, testing of the Optimass instrument is expected to continue at CERN. Future tests should consider the following recommendations:
@@ -508,11 +532,9 @@ The promising performance of the Optimass 6400 at low flow rates makes this a cl
 \item{Modify the flow meter's position to connect a straight section of pipe to its inlet, allowing time for any turbulence to settle.}
 \item{Collect further data to assess the repeatability of the mass flow and temeprature trends identified above over a range of test conditions.}
 \item{Evaluate research into the effect of \textit{reduced pressure}, and consider its effect in performance analysis.}
-larger flow meter, dedicated test rig, volumetric flow rate of gas phase? flow regimes, frequency domain analysis, flow meter positioning. real time reference condition calculation. flow velocity. test low flows using bypass. chiller management. definition of true performance envelope.two-phase signal what does it mean?
-\iffalse
-\bibliographystyle{ieeetr}
-\bibliography{bibfile}
-\fi
+\end{itemize}
+Finally, any future assessment of the Optimass 6400's practicality for a real-time measurement of vapour quality would have to evaluate its transient response. Time domain analysis is beyond the scope of tihs report, but would in itself have to be examined to prove the viability of the concept.
+
 \begin{thebibliography}{9}
 
 \bibitem{Mastrullo 2012}
@@ -550,7 +572,6 @@ P. Tropea \textit{et al.} "Design, construction and commissioning of a 15 kW CO$
 
 \bibitem{jerome} 
 J. Daguin \textit{et al.} "Evaporative $CO_2$ Cooling System for the Upgrade of the CMS Pixel Detector at CERN", \textit{10th IIR Gustav Lorentzen Conference on Natural Refrigerants}, 2012, Paper no. 188.
-%Krohne http://optimass6400.krohne.com/#introduction
 
 \bibitem{krohne online}
 Krohne Group. "Optimass 6400" Internet: \underline{http://optimass6400.krohne.com/\#\_introduction}, [Feb. 18, 2015]
@@ -621,8 +642,8 @@ Emerson Process Management. "Explaining how two-phase flow affects mass flowmete
 \end{thebibliography}
 \appendix
 \chapter{The TIF Cooling System}\label{app:TIF}
-\includepdf{../docs/PI_TIF_Plant.pdf}
-\includepdf[landscape]{../docs/PI_TIF_Manifold.pdf}
+%\includepdf{../docs/PI_TIF_Plant.pdf}
+%\includepdf[landscape]{../docs/PI_TIF_Manifold.pdf}
 %\chapter{Krohne Calibration and Sizing Documents}
 %\includepdf{../docs/calibration.pdf}
 %\includepdf{../docs/sizing.pdf}
@@ -632,12 +653,12 @@ Emerson Process Management. "Explaining how two-phase flow affects mass flowmete
 \includepdf[landscape]{../docs/heater2.pdf}
 \includepdf[landscape]{../docs/heater3.pdf}
 \chapter{MATLAB Code} \label{app:Matlab}
-The complete architecture for the data import, filtering, analysis and visualisation involved several hundred lines of code spread across 6 main scripts and more than dozens of analysis functions. The code was spread across directories for thermodynamics, data filtering and database management. Key functions and scripts will be given here. The rest of the code, as well as raw data and READMEs, can be found at www.github.com/TymP/OptimassMatlab.\\\
-All data and code are freely accessible, and CERN does not claim any intellectual property.
-\section{Thermodynamics}
-\section{Data Handling}
-\section{Data Visualisation}
+%The complete architecture for the data import, filtering, analysis and visualisation involved several hundred lines of code spread across 6 main scripts and more than dozens of analysis functions. The code was spread across directories for thermodynamics, data filtering and database management. Key functions and scripts will be given here. The rest of the code, as well as raw data and READMEs, can be found at www.github.com/TymP/OptimassMatlab.\\\
+%All data and code are freely accessible, and CERN does not claim any intellectual property.
+%\section{Thermodynamics}
+%\section{Data Handling}
+%\section{Data Visualisation}
 
-\chapter{Test Log}
-\chapter{Raw Data}
+%\chapter{Test Log}
+%\chapter{Raw Data}
 \end{document}
