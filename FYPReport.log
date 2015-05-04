@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.30)  4 MAY 2015 18:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.30)  4 MAY 2015 20:12
 entering extended mode
 **FYPReport.tex
 
@@ -511,11 +511,76 @@ S2\BEng Project\Final Submission\Final Report\FYPReport.out")
 ("C:\Users\Tim\Documents\Education\University of Bath\Mechanical Engineering\Y3
 S2\BEng Project\Final Submission\Final Report\FYPReport.out")
 \@outlinefile=\write4
+
+
+pdfTeX warning: pdflatex (file C:/Users/Tim/Documents/Education/University of B
+ath/Mechanical Engineering/Y3S2/BEng Project/Final Submission/Final Report/docs
+/bathCoverPage.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<docs/bathCoverPage.pdf, id=155, 597.50829pt x 845.0471pt>
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+
+<use docs/bathCoverPage.pdf>
+Package pdftex.def Info: docs/bathCoverPage.pdf used on input line 37.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+
+pdfTeX warning: pdflatex (file C:/Users/Tim/Documents/Education/University of B
+ath/Mechanical Engineering/Y3S2/BEng Project/Final Submission/Final Report/docs
+/bathCoverPage.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+<use docs/bathCoverPage.pdf>
+Package pdftex.def Info: docs/bathCoverPage.pdf used on input line 37.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+
+pdfTeX warning: pdflatex (file C:/Users/Tim/Documents/Education/University of B
+ath/Mechanical Engineering/Y3S2/BEng Project/Final Submission/Final Report/docs
+/bathCoverPage.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file C:/Users/Tim/Documents/Education/University of B
+ath/Mechanical Engineering/Y3S2/BEng Project/Final Submission/Final Report/docs
+/bathCoverPage.pdf): PDF inclusion: found PDF version <1.7>, but at most versio
+n <1.5> allowed
+<docs/bathCoverPage.pdf, id=158, page=1, 597.50829pt x 845.0471pt>
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+
+<use docs/bathCoverPage.pdf, page 1>
+Package pdftex.def Info: docs/bathCoverPage.pdf, page1 used on input line 37.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+ <use docs/bathCoverPage.pdf, page 1>
+Package pdftex.def Info: docs/bathCoverPage.pdf, page1 used on input line 37.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+
+<use docs/bathCoverPage.pdf, page 1>
+Package pdftex.def Info: docs/bathCoverPage.pdf, page1 used on input line 37.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+ <use docs/bathCoverPage.pdf, page 1>
+Package pdftex.def Info: docs/bathCoverPage.pdf, page1 used on input line 37.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: docs/bathCoverPage.pdf Graphic file (type pdf)
+
+<use docs/bathCoverPage.pdf, page 1>
+Package pdftex.def Info: docs/bathCoverPage.pdf, page1 used on input line 37.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warning (ext4): des
-tination with the same identifier (name{page.i}) has been already used, duplica
-te ignored
+ <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering/Y3
+S2/BEng Project/Final Submission/Final Report/docs/bathCoverPage.pdf>]pdfTeX wa
+rning (ext4): destination with the same identifier (name{page.1}) has been alre
+ady used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.39 \begin
+           {abstract} [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[1]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) h
+as been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.45 \newpage
@@ -527,373 +592,391 @@ S2\BEng Project\Final Submission\Final Report\FYPReport.toc" [4
 \tf@toc=\write5
  [5]
 Chapter 1.
-<figures/CMS.jpg, id=242, 480.29437pt x 249.93375pt>
+<figures/CMS.jpg, id=285, 480.29437pt x 249.93375pt>
 File: figures/CMS.jpg Graphic file (type jpg)
  <use figures/CMS.jpg>
-Package pdftex.def Info: figures/CMS.jpg used on input line 104.
+Package pdftex.def Info: figures/CMS.jpg used on input line 105.
 (pdftex.def)             Requested size: 469.75502pt x 244.45288pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.109 \FloatBarrier
+                    [1
 
-] <figures/2PACLschem.jpg, id=255, 433.62pt x 148.30406pt>
+]
+<figures/2PACLschem.jpg, id=296, 433.62pt x 148.30406pt>
 File: figures/2PACLschem.jpg Graphic file (type jpg)
 
 <use figures/2PACLschem.jpg>
-Package pdftex.def Info: figures/2PACLschem.jpg used on input line 113.
+Package pdftex.def Info: figures/2PACLschem.jpg used on input line 114.
 (pdftex.def)             Requested size: 433.61894pt x 148.30368pt.
  [2 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
 /Y3S2/BEng Project/Final Submission/Final Report/figures/CMS.jpg> <C:/Users/Tim
 /Documents/Education/University of Bath/Mechanical Engineering/Y3S2/BEng Projec
-t/Final Submission/Final Report/figures/2PACLschem.jpg>] <figures/densityMethod
-.jpg, id=269, 526.96875pt x 510.40688pt>
+t/Final Submission/Final Report/figures/2PACLschem.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
+<figures/densityMethod.jpg, id=308, 526.96875pt x 510.40688pt>
 File: figures/densityMethod.jpg Graphic file (type jpg)
 
 <use figures/densityMethod.jpg>
 Package pdftex.def Info: figures/densityMethod.jpg used on input line 128.
 (pdftex.def)             Requested size: 234.8775pt x 227.50027pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 136.
+ [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
 
-<figures/Optimass6400.jpg, id=272, 380.92313pt x 361.35pt>
+<figures/Optimass6400.jpg, id=318, 380.92313pt x 361.35pt>
 File: figures/Optimass6400.jpg Graphic file (type jpg)
 
 <use figures/Optimass6400.jpg>
-Package pdftex.def Info: figures/Optimass6400.jpg used on input line 141.
+Package pdftex.def Info: figures/Optimass6400.jpg used on input line 145.
 (pdftex.def)             Requested size: 187.89914pt x 178.243pt.
- [3 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
-/Y3S2/BEng Project/Final Submission/Final Report/figures/densityMethod.jpg>] [4
+ [4 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
+/Y3S2/BEng Project/Final Submission/Final Report/figures/densityMethod.jpg>] [5
  <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering/Y3
 S2/BEng Project/Final Submission/Final Report/figures/Optimass6400.jpg>]
 Chapter 2.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 167.
+(hyperref)                removing `math shift' on input line 171.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 167.
+(hyperref)                removing `subscript' on input line 171.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 167.
+(hyperref)                removing `math shift' on input line 171.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-<figures/flowPatterns.jpg, id=298, 261.91083pt x 267.88805pt>
+<figures/flowPatterns.jpg, id=347, 261.91083pt x 267.88805pt>
 File: figures/flowPatterns.jpg Graphic file (type jpg)
 
 <use figures/flowPatterns.jpg>
-Package pdftex.def Info: figures/flowPatterns.jpg used on input line 176.
-(pdftex.def)             Requested size: 469.75502pt x 480.48131pt.
+Package pdftex.def Info: figures/flowPatterns.jpg used on input line 182.
+(pdftex.def)             Requested size: 234.8775pt x 240.2386pt.
+ [6
 
-<figures/chengMap.jpg, id=303, 421.575pt x 310.15875pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
+
+ []
+
+<figures/chengMap.jpg, id=362, 421.575pt x 310.15875pt>
 File: figures/chengMap.jpg Graphic file (type jpg)
 
 <use figures/chengMap.jpg>
-Package pdftex.def Info: figures/chengMap.jpg used on input line 182.
+Package pdftex.def Info: figures/chengMap.jpg used on input line 190.
 (pdftex.def)             Requested size: 234.8775pt x 172.8027pt.
- [5
-
-] [6 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
-g/Y3S2/BEng Project/Final Submission/Final Report/figures/flowPatterns.jpg>]
-<figures/coriolis.jpg, id=345, 152.4897pt x 67.452pt>
+ [7 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
+/Y3S2/BEng Project/Final Submission/Final Report/figures/flowPatterns.jpg> <C:/
+Users/Tim/Documents/Education/University of Bath/Mechanical Engineering/Y3S2/BE
+ng Project/Final Submission/Final Report/figures/chengMap.jpg>] <figures/coriol
+is.jpg, id=391, 152.4897pt x 67.452pt>
 File: figures/coriolis.jpg Graphic file (type jpg)
 
 <use figures/coriolis.jpg>
-Package pdftex.def Info: figures/coriolis.jpg used on input line 211.
+Package pdftex.def Info: figures/coriolis.jpg used on input line 220.
 (pdftex.def)             Requested size: 281.85587pt x 124.69159pt.
- [7 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
-/Y3S2/BEng Project/Final Submission/Final Report/figures/chengMap.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 216--222
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 225--231
 
  []
 
-[8 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering/
+[9 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering/
 Y3S2/BEng Project/Final Submission/Final Report/figures/coriolis.jpg>]
 Chapter 3.
-<figures/TIFandHeater.jpg, id=389, 436.63126pt x 249.18094pt>
+<figures/TIFandHeater.jpg, id=436, 436.63126pt x 249.18094pt>
 File: figures/TIFandHeater.jpg Graphic file (type jpg)
 
 <use figures/TIFandHeater.jpg>
-Package pdftex.def Info: figures/TIFandHeater.jpg used on input line 231.
+Package pdftex.def Info: figures/TIFandHeater.jpg used on input line 240.
 (pdftex.def)             Requested size: 469.75502pt x 268.0848pt.
 
-Overfull \hbox (13.88893pt too wide) in paragraph at lines 231--232
+Overfull \hbox (13.88893pt too wide) in paragraph at lines 240--241
 [][]\OT1/cmr/m/n/10 [h!] 
  []
 
-[9
+[10
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
-LaTeX Warning: Reference `fig:TIFsimplified' on page 10 undefined on input line
- 238.
+ []
 
-<figures/TIFsimplified.jpg, id=397, 532.23843pt x 377.15906pt>
+<figures/TIFsimplified.jpg, id=445, 532.23843pt x 377.15906pt>
 File: figures/TIFsimplified.jpg Graphic file (type jpg)
 
 <use figures/TIFsimplified.jpg>
-Package pdftex.def Info: figures/TIFsimplified.jpg used on input line 240.
+Package pdftex.def Info: figures/TIFsimplified.jpg used on input line 250.
 (pdftex.def)             Requested size: 469.75502pt x 332.89085pt.
+ [11 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+g/Y3S2/BEng Project/Final Submission/Final Report/figures/TIFandHeater.jpg>] [1
+2 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering/Y
+3S2/BEng Project/Final Submission/Final Report/figures/TIFsimplified.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
-<figures/sensor.jpg, id=401, 1842.885pt x 3276.24pt>
+ []
+
+<figures/sensor.jpg, id=460, 1842.885pt x 3276.24pt>
 File: figures/sensor.jpg Graphic file (type jpg)
  <use figures/sensor.jpg>
-Package pdftex.def Info: figures/sensor.jpg used on input line 249.
-(pdftex.def)             Requested size: 234.8775pt x 417.52762pt.
+Package pdftex.def Info: figures/sensor.jpg used on input line 260.
+(pdftex.def)             Requested size: 140.92793pt x 250.50656pt.
 
-<figures/heaterCloseUp.jpg, id=402, 1842.885pt x 3276.24pt>
+<figures/heaterCloseUp.jpg, id=461, 1842.885pt x 3276.24pt>
 File: figures/heaterCloseUp.jpg Graphic file (type jpg)
 
 <use figures/heaterCloseUp.jpg>
-Package pdftex.def Info: figures/heaterCloseUp.jpg used on input line 255.
-(pdftex.def)             Requested size: 234.8775pt x 417.52762pt.
+Package pdftex.def Info: figures/heaterCloseUp.jpg used on input line 266.
+(pdftex.def)             Requested size: 140.92793pt x 250.50656pt.
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
-Overfull \hbox (4.44441pt too wide) in paragraph at lines 248--261
- [][]  [] 
  []
 
-[10 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
-/Y3S2/BEng Project/Final Submission/Final Report/figures/TIFandHeater.jpg>]
-[11 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
-/Y3S2/BEng Project/Final Submission/Final Report/figures/TIFsimplified.jpg>]
-[12 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
+[14 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
 /Y3S2/BEng Project/Final Submission/Final Report/figures/sensor.jpg> <C:/Users/
 Tim/Documents/Education/University of Bath/Mechanical Engineering/Y3S2/BEng Pro
 ject/Final Submission/Final Report/figures/heaterCloseUp.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
-
- []
-
-[13] <figures/typicalTestEdited.jpg, id=429, 798.85548pt x 503.55872pt>
+[15] <figures/typicalTestEdited.jpg, id=485, 798.85548pt x 503.55872pt>
 File: figures/typicalTestEdited.jpg Graphic file (type jpg)
 
 <use figures/typicalTestEdited.jpg>
-Package pdftex.def Info: figures/typicalTestEdited.jpg used on input line 310.
+Package pdftex.def Info: figures/typicalTestEdited.jpg used on input line 321.
 (pdftex.def)             Requested size: 469.75502pt x 296.11356pt.
- [14]
-<figures/processing.jpg, id=437, 633.86812pt x 343.2825pt>
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+ []
+
+<figures/processing.jpg, id=492, 633.86812pt x 343.2825pt>
 File: figures/processing.jpg Graphic file (type jpg)
 
 <use figures/processing.jpg>
-Package pdftex.def Info: figures/processing.jpg used on input line 319.
+Package pdftex.def Info: figures/processing.jpg used on input line 331.
 (pdftex.def)             Requested size: 469.75502pt x 254.41267pt.
- [15 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+ [17 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
 g/Y3S2/BEng Project/Final Submission/Final Report/figures/typicalTestEdited.jpg
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-[16 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
-/Y3S2/BEng Project/Final Submission/Final Report/figures/processing.jpg>]
-Overfull \hbox (15.45923pt too wide) in paragraph at lines 340--354
+
+Overfull \hbox (15.45923pt too wide) in paragraph at lines 352--366
 [][] 
  []
 
-[17] <enthalpyMethod.jpg, id=457, 526.96875pt x 510.40688pt>
+[18 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
+/Y3S2/BEng Project/Final Submission/Final Report/figures/processing.jpg>]
+<enthalpyMethod.jpg, id=517, 526.96875pt x 510.40688pt>
 File: enthalpyMethod.jpg Graphic file (type jpg)
 
 <use enthalpyMethod.jpg>
-Package pdftex.def Info: enthalpyMethod.jpg used on input line 369.
+Package pdftex.def Info: enthalpyMethod.jpg used on input line 383.
 (pdftex.def)             Requested size: 234.8775pt x 227.50027pt.
-
-
-LaTeX Warning: Reference `enthalpyMethod' on page 18 undefined on input line 37
-3.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
+ [19]
+Underfull \hbox (badness 10000) in paragraph at lines 388--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
+Underfull \hbox (badness 10000) in paragraph at lines 388--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
+Underfull \hbox (badness 10000) in paragraph at lines 388--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
+Underfull \hbox (badness 10000) in paragraph at lines 388--394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--379
+Underfull \hbox (badness 10000) in paragraph at lines 388--394
 
  []
 
-[18]
 
-LaTeX Warning: Reference `eq:VPV' on page 19 undefined on input line 386.
+LaTeX Warning: Reference `eq:VPV' on page 20 undefined on input line 407.
 
-[19 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
-/Y3S2/BEng Project/Final Submission/Final Report/enthalpyMethod.jpg>]
+[20 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineering
+/Y3S2/BEng Project/Final Submission/Final Report/enthalpyMethod.jpg>] [21]
 Chapter 4.
-<figures/plots/fig1.png, id=474, 834.11626pt x 470.50781pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+
+ []
+
+<figures/plots/fig1.png, id=539, 834.11626pt x 470.50781pt>
 File: figures/plots/fig1.png Graphic file (type png)
 
 <use figures/plots/fig1.png>
-Package pdftex.def Info: figures/plots/fig1.png used on input line 400.
+Package pdftex.def Info: figures/plots/fig1.png used on input line 422.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
 
-<figures/plots/fig2.png, id=475, 834.11626pt x 470.50781pt>
+<figures/plots/fig2.png, id=540, 834.11626pt x 470.50781pt>
 File: figures/plots/fig2.png Graphic file (type png)
 
 <use figures/plots/fig2.png>
-Package pdftex.def Info: figures/plots/fig2.png used on input line 405.
+Package pdftex.def Info: figures/plots/fig2.png used on input line 427.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
+ [22
 
-<figures/plots/fig11.png, id=478, 834.11626pt x 470.50781pt>
-File: figures/plots/fig11.png Graphic file (type png)
-
-<use figures/plots/fig11.png>
-Package pdftex.def Info: figures/plots/fig11.png used on input line 412.
-(pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
- [20
-
-] [21 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineeri
+] [23 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineeri
 ng/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig1.png (PNG 
 copy)> <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineer
 ing/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig2.png (PNG
  copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 420--420
+<figures/plots/fig11.png, id=554, 834.11626pt x 470.50781pt>
+File: figures/plots/fig11.png Graphic file (type png)
+
+<use figures/plots/fig11.png>
+Package pdftex.def Info: figures/plots/fig11.png used on input line 436.
+(pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
 
  []
 
-<figures/plots/fig3.png, id=493, 834.11626pt x 470.50781pt>
+<figures/plots/fig3.png, id=563, 834.11626pt x 470.50781pt>
 File: figures/plots/fig3.png Graphic file (type png)
 
 <use figures/plots/fig3.png>
-Package pdftex.def Info: figures/plots/fig3.png used on input line 422.
+Package pdftex.def Info: figures/plots/fig3.png used on input line 447.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
 
-<figures/plots/fig4.png, id=496, 834.11626pt x 470.50781pt>
+<figures/plots/fig4.png, id=566, 834.11626pt x 470.50781pt>
 File: figures/plots/fig4.png Graphic file (type png)
 
 <use figures/plots/fig4.png>
-Package pdftex.def Info: figures/plots/fig4.png used on input line 428.
+Package pdftex.def Info: figures/plots/fig4.png used on input line 453.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
- [22 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+ [25 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
 g/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig11.png (PNG 
-copy)>] [23 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Eng
+copy)>] [26 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Eng
 ineering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig3.png
  (PNG copy)> <C:/Users/Tim/Documents/Education/University of Bath/Mechanical En
 gineering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig4.pn
-g (PNG copy)>] [24]
-<figures/plots/fig12.png, id=517, 824.32968pt x 470.50781pt>
+g (PNG copy)>]
+<figures/plots/fig12.png, id=582, 824.32968pt x 470.50781pt>
 File: figures/plots/fig12.png Graphic file (type png)
 
 <use figures/plots/fig12.png>
-Package pdftex.def Info: figures/plots/fig12.png used on input line 454.
+Package pdftex.def Info: figures/plots/fig12.png used on input line 479.
 (pdftex.def)             Requested size: 469.75502pt x 268.12761pt.
- [25]
-<figures/plots/fig5.png, id=526, 834.11626pt x 470.50781pt>
+ [27]
+<figures/plots/fig5.png, id=593, 834.11626pt x 470.50781pt>
 File: figures/plots/fig5.png Graphic file (type png)
 
 <use figures/plots/fig5.png>
-Package pdftex.def Info: figures/plots/fig5.png used on input line 465.
+Package pdftex.def Info: figures/plots/fig5.png used on input line 490.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
 
-<figures/plots/fig6.png, id=527, 834.11626pt x 470.50781pt>
+<figures/plots/fig6.png, id=594, 834.11626pt x 470.50781pt>
 File: figures/plots/fig6.png Graphic file (type png)
 
 <use figures/plots/fig6.png>
-Package pdftex.def Info: figures/plots/fig6.png used on input line 471.
+Package pdftex.def Info: figures/plots/fig6.png used on input line 496.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
- [26 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+ [28 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
 g/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig12.png (PNG 
-copy)>] [27 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Eng
+copy)>] [29 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Eng
 ineering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig5.png
  (PNG copy)> <C:/Users/Tim/Documents/Education/University of Bath/Mechanical En
 gineering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig6.pn
 g (PNG copy)>]
-<figures/plots/fig7.png, id=541, 839.38594pt x 470.50781pt>
+<figures/plots/fig7.png, id=611, 839.38594pt x 470.50781pt>
 File: figures/plots/fig7.png Graphic file (type png)
 
 <use figures/plots/fig7.png>
-Package pdftex.def Info: figures/plots/fig7.png used on input line 479.
+Package pdftex.def Info: figures/plots/fig7.png used on input line 504.
 (pdftex.def)             Requested size: 469.75502pt x 263.31744pt.
 
-<figures/plots/fig8.png, id=542, 839.38594pt x 470.50781pt>
+<figures/plots/fig8.png, id=612, 839.38594pt x 470.50781pt>
 File: figures/plots/fig8.png Graphic file (type png)
 
 <use figures/plots/fig8.png>
-Package pdftex.def Info: figures/plots/fig8.png used on input line 485.
+Package pdftex.def Info: figures/plots/fig8.png used on input line 510.
 (pdftex.def)             Requested size: 469.75502pt x 263.31744pt.
- [28] [29 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engin
+ [30] [31 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engin
 eering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig7.png (
 PNG copy)> <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engi
 neering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig8.png 
 (PNG copy)>]
-<figures/plots/fig9.png, id=555, 840.13875pt x 470.50781pt>
+<figures/plots/fig9.png, id=623, 840.13875pt x 470.50781pt>
 File: figures/plots/fig9.png Graphic file (type png)
 
 <use figures/plots/fig9.png>
-Package pdftex.def Info: figures/plots/fig9.png used on input line 492.
+Package pdftex.def Info: figures/plots/fig9.png used on input line 518.
 (pdftex.def)             Requested size: 469.75502pt x 263.08052pt.
 
-<figures/plots/fig10.png, id=556, 834.11626pt x 470.50781pt>
+<figures/plots/fig10.png, id=624, 834.11626pt x 470.50781pt>
 File: figures/plots/fig10.png Graphic file (type png)
 
 <use figures/plots/fig10.png>
-Package pdftex.def Info: figures/plots/fig10.png used on input line 498.
+Package pdftex.def Info: figures/plots/fig10.png used on input line 524.
 (pdftex.def)             Requested size: 469.75502pt x 264.98306pt.
- [30] [31 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engin
+ [32] [33 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engin
 eering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig9.png (
 PNG copy)> <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engi
 neering/Y3S2/BEng Project/Final Submission/Final Report/figures/plots/fig10.png
  (PNG copy)>]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 504--507
+Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
  []
 
-[32
 
-] [33]
-Chapter 6.
+Underfull \hbox (badness 10000) in paragraph at lines 535--541
+
+ []
+
 [34
+
+] [35] [36]
+Chapter 6.
+[37
 
 ]
 Chapter 7.
-[35
+[38
 
 ]
 Missing character: There is no ‚ in font cmti10!
 Missing character: There is no Ä in font cmti10!
 Missing character: There is no ô in font cmti10!
- [36
+ [39
 
 ]
-Overfull \hbox (7.35695pt too wide) in paragraph at lines 602--603
+Overfull \hbox (7.35695pt too wide) in paragraph at lines 644--645
 $[]$\OT1/cmr/m/n/10 ,
  []
 
@@ -903,193 +986,194 @@ Missing character: There is no ê in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ì in font cmr10!
-[37]
+[40]
 Appendix A.
-[38
+[41
 
 ]
 Appendix B.
-<figures/../docs/Heater_Design.pdf, id=614, 1195.02466pt x 845.0471pt>
+<figures/../docs/Heater_Design.pdf, id=694, 1195.02466pt x 845.0471pt>
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf used on input line 6
-52.
+94.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf used on input line 6
-52.
+94.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
- [39
+ [42
 
 ]
-<figures/../docs/Heater_Design.pdf, id=621, page=1, 1195.02466pt x 845.0471pt>
+<figures/../docs/Heater_Design.pdf, id=701, page=1, 1195.02466pt x 845.0471pt>
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf, page 1>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf, page1 used on input
- line 652.
+ line 694.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf, page 1>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf, page1 used on input
- line 652.
+ line 694.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf, page 1>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf, page1 used on input
- line 652.
+ line 694.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf, page 1>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf, page1 used on input
- line 652.
+ line 694.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/Heater_Design.pdf Graphic file (type pdf)
 
 <use figures/../docs/Heater_Design.pdf, page 1>
 Package pdftex.def Info: figures/../docs/Heater_Design.pdf, page1 used on input
- line 652.
+ line 694.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
- [40 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+ [43 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
 g/Y3S2/BEng Project/Final Submission/Final Report/figures/../docs/Heater_Design
 .pdf>]
-<figures/../docs/heater2.pdf, id=641, 1195.02466pt x 845.0471pt>
+<figures/../docs/heater2.pdf, id=721, 1195.02466pt x 845.0471pt>
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater2.pdf>
-Package pdftex.def Info: figures/../docs/heater2.pdf used on input line 653.
+Package pdftex.def Info: figures/../docs/heater2.pdf used on input line 695.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
  <use figures/../docs/heater2.pdf>
-Package pdftex.def Info: figures/../docs/heater2.pdf used on input line 653.
+Package pdftex.def Info: figures/../docs/heater2.pdf used on input line 695.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 
-<figures/../docs/heater2.pdf, id=644, page=1, 1195.02466pt x 845.0471pt>
+<figures/../docs/heater2.pdf, id=724, page=1, 1195.02466pt x 845.0471pt>
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater2.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater2.pdf, page1 used on input line 
-653.
+695.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater2.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater2.pdf, page1 used on input line 
-653.
+695.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater2.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater2.pdf, page1 used on input line 
-653.
+695.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater2.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater2.pdf, page1 used on input line 
-653.
+695.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/heater2.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater2.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater2.pdf, page1 used on input line 
-653.
+695.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
- [41 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+ [44 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
 g/Y3S2/BEng Project/Final Submission/Final Report/figures/../docs/heater2.pdf>]
 
-<figures/../docs/heater3.pdf, id=664, 1195.02466pt x 845.0471pt>
+<figures/../docs/heater3.pdf, id=744, 1195.02466pt x 845.0471pt>
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater3.pdf>
-Package pdftex.def Info: figures/../docs/heater3.pdf used on input line 654.
+Package pdftex.def Info: figures/../docs/heater3.pdf used on input line 696.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
  <use figures/../docs/heater3.pdf>
-Package pdftex.def Info: figures/../docs/heater3.pdf used on input line 654.
+Package pdftex.def Info: figures/../docs/heater3.pdf used on input line 696.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 
-<figures/../docs/heater3.pdf, id=667, page=1, 1195.02466pt x 845.0471pt>
+<figures/../docs/heater3.pdf, id=747, page=1, 1195.02466pt x 845.0471pt>
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater3.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater3.pdf, page1 used on input line 
-654.
+696.
 (pdftex.def)             Requested size: 1195.02174pt x 845.04504pt.
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater3.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater3.pdf, page1 used on input line 
-654.
+696.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater3.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater3.pdf, page1 used on input line 
-654.
+696.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater3.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater3.pdf, page1 used on input line 
-654.
+696.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
 File: figures/../docs/heater3.pdf Graphic file (type pdf)
 
 <use figures/../docs/heater3.pdf, page 1>
 Package pdftex.def Info: figures/../docs/heater3.pdf, page1 used on input line 
-654.
+696.
 (pdftex.def)             Requested size: 794.97318pt x 562.15558pt.
- [42 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
+ [45 <C:/Users/Tim/Documents/Education/University of Bath/Mechanical Engineerin
 g/Y3S2/BEng Project/Final Submission/Final Report/figures/../docs/heater3.pdf>]
 
 Appendix C.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 664.
-[43
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 706.
+[46
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 664.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 706.
 
 ("C:\Users\Tim\Documents\Education\University of Bath\Mechanical Engineering\Y3
 S2\BEng Project\Final Submission\Final Report\FYPReport.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 664.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 664.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 706.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 706.
 Package rerunfilecheck Info: File `FYPReport.out' has not changed.
-(rerunfilecheck)             Checksum: 9DC84E3BB47416FDA4BE6F805724EFB7;2491.
+(rerunfilecheck)             Checksum: A030BAA670F65D0F5BEA4EF7D540A55B;2584.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 664.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 706.
  ) 
 Here is how much of TeX's memory you used:
- 9807 strings out of 493921
- 147736 string characters out of 3144882
- 253341 words of memory out of 3000000
- 12759 multiletter control sequences out of 15000+200000
- 7395 words of font info for 27 fonts, out of 3000000 for 9000
+ 9858 strings out of 493921
+ 148355 string characters out of 3144882
+ 254475 words of memory out of 3000000
+ 12780 multiletter control sequences out of 15000+200000
+ 11645 words of font info for 42 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 42i,18n,42p,1507b,523s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,18n,42p,1198b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
 Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pro
 gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on FYPReport.pdf (49 pages, 4402931 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on FYPReport.pdf (54 pages, 4608301 bytes).
 PDF statistics:
- 767 PDF objects out of 1000 (max. 8388607)
- 177 named destinations out of 1000 (max. 500000)
- 487 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 853 PDF objects out of 1000 (max. 8388607)
+ 197 named destinations out of 1000 (max. 500000)
+ 515 words of extra memory for PDF output out of 10000 (max. 10000000)
 
