@@ -3,7 +3,7 @@
 \title{Experimental Assessment of a Krohne Optimass 6400 Mass Flow Meter for Determining CO$_2$ Vapour Quality}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=1cm]{geometry}
+\usepackage{geometry}
 \usepackage{gensymb}
 \usepackage{placeins}
 \usepackage{pdflscape}
@@ -38,9 +38,10 @@
 \graphicspath{{figures/}}
 \includepdf[pages={1}]{docs/bathCoverPage.pdf}
 \maketitle
+\newgeometry{top=2.5cm, bottom=2.5cm, left=3cm, right=1cm}
 \begin{abstract}
 \pagenumbering{roman}
-%Mention findings from lit reveiew
+Vapour quality is a crucial parameter in the design and commissioning of CO$_2$ cooling systems for the particle trackers at CERN. This study assessed the practicality of determining vapour quality in real-time using 2-phase density measured by a new coriolis flow meter: the Krohne Optimass 6400.\\ A review of current literature evaluated techniques for measuring vapour quality and their relative drawbacks, as well as the particular challenges of working with CO$_2$. Complimented with research on the 2-phase performance of coriolis flow meters, this research formed a theoretical base to contextualise the instrument's performance.\\Laboratory testing characterised the instrument's performance by by connecting it to a large CO$_2$ cooling system and logging its measurements over a range of test conditions: temperatures from -25 to +5 $^\circ$C, flow rates from 20 to 105 gs$^{-1}$ and vapour qualities from 0-70\%. After developing an analytical model for calculating reference thermodynamic conditions, the experimental data was compared to reference instrumentation and predicted thermodynamic properties.\\ The instrument's measurements were observed to be repeatable, albeit highly unpredictable and inaccurate, especially at high flow rates.  Mass flow errors ranged from 0-100\%, and density errors up to 40\%.Performance was observed to improve with temperature, a phenomenon tentatively attributed to the so-called \textit{reduced pressure}, but meriting further research.\\ Performance was also observed to improve with decreasing flow rate. At low flow rates the sensor exhibited density errors fell within 15\% and corresponding estimates of vapour quality achieved errors within 10\% for wet fluid. \\ An additional analysis of the coolant's vapor phase velocity served to explain the improvement in the sensor's performance at low flow rates by demonstrating that mass flow errors for high flow rates peaked at a critical vapor phase velocity of 3.44 ms$^{-1}$.\\ Overall, this study gave a broad overview of the Otpimass 6400's 2-phase performance while validating the concept of vapour quality measurement using density. In addition, it laid the foundation for further research testing by identifying areas of interest - low flow rates and temperature correlation - and by establishing an analytical framework for future analyses.
 \end{abstract}
 \section*{Acknowledgments}
 Thanks to Dr. Roger Ngwompo, my academic supervisor, and Dr. Martin Ansell, FYP coordinator, for making my continued collaboration with CERN possible. I'd also like to thank Nicola Spadavecchia, Bart Verlaat and Jerome Noel for their technical support. Finally, my thanks to Paola Tropea, my industrial supervisor, for her sharp questions and crucial guidance throughout my research. 
@@ -668,10 +669,6 @@ L. Cheng, G. Ribatski, J. M. Quib$\acute{e}$n, J R. Thome. "New prediction metho
 
 \bibitem{bart}
 B. Verlaat. "Controlling a 2-phase CO2 loop using a 2-phase accumulator." \textit{International Conference of Refrigeration}, 2007, Beijing, China, ICR07-B2-1565 
-
-\bibitem{bart2}
-A.P. Colijn, B. Verlaat. "Evaporative CO$_2$ Heat Transfer Measurements for Cooling Systems of Partical Physics Detectors." \textit{7$^{
-th}$ International Conference on Heat Transfer, Fluid Mechanics and Thermodynamics}, 2010, Antalaya, Turkey, HEFAT2010 
 
 \bibitem{mishra}
 B. Mishra. "CO$_2$ based two phase cooling test set up for CMS trackers: Comparison of experiments with theoretical models." \textit{CERN CMS Collaboration}
