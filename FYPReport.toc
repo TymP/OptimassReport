@@ -2,37 +2,47 @@
 \contentsline {section}{\numberline {1.1}CO$_2$ Cooling at CERN}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}2-Phase Accumulator Controlled Loop}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Vapour Quality and 2-Phase Density}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}The Krohne Optimass 6400}{4}{section.1.4}
+\contentsline {section}{\numberline {1.4}The Krohne Optimass 6400}{3}{section.1.4}
 \contentsline {section}{\numberline {1.5}Objectives and Documentation}{4}{section.1.5}
-\contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}
-\contentsline {section}{\numberline {2.1}Behaviour of 2-Phase CO$_2$}{6}{section.2.1}
-\contentsline {section}{\numberline {2.2}Determining Vapour Quality}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}2-Phase Performance of Coriolis Flow Meters}{8}{section.2.3}
-\contentsline {chapter}{\numberline {3}Methods}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Experimental Methods}{10}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Apparatus}{11}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Control and Data Acquisition}{14}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Key Variables}{15}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Test Protocol}{15}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Data Analysis Methods}{17}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Assumptions}{18}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Export and Pre-Processing}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Steady-State Filtering}{19}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Data Processing and Visualisation}{19}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Calculation of Reference Conditions}{19}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Calculation of Mass Flux and Vapour Phase Velocity}{20}{subsection.3.2.6}
-\contentsline {chapter}{\numberline {4}Results}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Overview}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Mass Flow Trend}{25}{section.4.2}
-\contentsline {section}{\numberline {4.3}Temperature Trend}{28}{section.4.3}
-\contentsline {section}{\numberline {4.4}Vapour Quality Measurement at Low Flow Rates}{32}{section.4.4}
-\contentsline {chapter}{\numberline {5}Discussion}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Mass Flow Rate Trend}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}Temperature Trend}{35}{section.5.3}
-\contentsline {section}{\numberline {5.4}Uncertainty}{35}{section.5.4}
-\contentsline {chapter}{\numberline {6}Conclusions}{37}{chapter.6}
-\contentsline {chapter}{\numberline {7}Future Work}{38}{chapter.7}
-\contentsline {chapter}{\numberline {A}The TIF Cooling System}{41}{appendix.A}
+\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}
+\setcounter {tocdepth}{0}
+\contentsline {section}{\numberline {2.1}Behaviour of 2-Phase CO$_2$}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Determining Vapour Quality}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}2-Phase Performance of Coriolis Flow Meters}{7}{section.2.3}
+\setcounter {tocdepth}{1}
+\contentsline {chapter}{\numberline {3}Methods}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Experimental Methods}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Apparatus}{10}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Control and Data Acquisition}{11}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Key Variables}{12}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Test Protocol}{13}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Data Analysis Methods}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Assumptions}{15}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Export and Pre-Processing}{16}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Steady-State Filtering}{16}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Data Processing and Visualisation}{17}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Calculation of Reference Conditions}{17}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Calculation of Mass Flux and Vapour Phase Velocity}{19}{subsection.3.2.6}
+\contentsline {chapter}{\numberline {4}Results}{20}{chapter.4}
+\setcounter {tocdepth}{0}
+\contentsline {section}{\numberline {4.1}Overview}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Mass Flow Trend}{22}{section.4.2}
+\contentsline {section}{\numberline {4.3}Temperature Trend}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}Vapour Quality Measurement at Low Flow Rates}{28}{section.4.4}
+\setcounter {tocdepth}{1}
+\contentsline {chapter}{\numberline {5}Discussion}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview}{30}{section.5.1}
+\contentsline {section}{\numberline {5.2}Mass Flow Rate Trend}{30}{section.5.2}
+\contentsline {section}{\numberline {5.3}Temperature Trend}{31}{section.5.3}
+\contentsline {section}{\numberline {5.4}Uncertainty}{32}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusions}{34}{chapter.6}
+\contentsline {chapter}{\numberline {7}Future Work}{35}{chapter.7}
+\contentsline {chapter}{Appendices}{38}{chapter*.5}
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{\numberline {A}The TIF Cooling System}{39}{appendix.A}
 \contentsline {chapter}{\numberline {B}Dummy Load Heater Module Mechanical Design}{42}{appendix.B}
 \contentsline {chapter}{\numberline {C}MATLAB Code}{46}{appendix.C}
+\contentsline {section}{\numberline {C.1}Thermodynamics}{46}{section.C.1}
+\contentsline {section}{\numberline {C.2}Data Handling}{47}{section.C.2}
+\contentsline {section}{\numberline {C.3}Data Visualisation}{50}{section.C.3}
+\contentsline {chapter}{\numberline {D}Test Log}{55}{appendix.D}

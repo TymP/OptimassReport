@@ -1,38 +1,12 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.1}{COTEXT Cooling at CERN}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{2-Phase Accumulator Controlled Loop}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Vapour Quality and 2-Phase Density}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{The Krohne Optimass 6400}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Objectives and Documentation}{chapter.1}% 6
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 7
-\BOOKMARK [1][-]{section.2.1}{Behaviour of 2-Phase CO2}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{Determining Vapour Quality}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.3}{2-Phase Performance of Coriolis Flow Meters}{chapter.2}% 10
-\BOOKMARK [0][-]{chapter.3}{Methods}{}% 11
-\BOOKMARK [1][-]{section.3.1}{Experimental Methods}{chapter.3}% 12
-\BOOKMARK [2][-]{subsection.3.1.1}{Apparatus}{section.3.1}% 13
-\BOOKMARK [2][-]{subsection.3.1.2}{Control and Data Acquisition}{section.3.1}% 14
-\BOOKMARK [2][-]{subsection.3.1.3}{Key Variables}{section.3.1}% 15
-\BOOKMARK [2][-]{subsection.3.1.4}{Test Protocol}{section.3.1}% 16
-\BOOKMARK [1][-]{section.3.2}{Data Analysis Methods}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.2.1}{Assumptions}{section.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.2.2}{Export and Pre-Processing}{section.3.2}% 19
-\BOOKMARK [2][-]{subsection.3.2.3}{Steady-State Filtering}{section.3.2}% 20
-\BOOKMARK [2][-]{subsection.3.2.4}{Data Processing and Visualisation}{section.3.2}% 21
-\BOOKMARK [2][-]{subsection.3.2.5}{Calculation of Reference Conditions}{section.3.2}% 22
-\BOOKMARK [2][-]{subsection.3.2.6}{Calculation of Mass Flux and Vapour Phase Velocity}{section.3.2}% 23
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 24
-\BOOKMARK [1][-]{section.4.1}{Overview}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.2}{Mass Flow Trend}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.3}{Temperature Trend}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.4}{Vapour Quality Measurement at Low Flow Rates}{chapter.4}% 28
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 29
-\BOOKMARK [1][-]{section.5.1}{Overview}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.2}{Mass Flow Rate Trend}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.3}{Temperature Trend}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.4}{Uncertainty}{chapter.5}% 33
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 34
-\BOOKMARK [0][-]{chapter.7}{Future Work}{}% 35
-\BOOKMARK [0][-]{appendix.A}{The TIF Cooling System}{}% 36
-\BOOKMARK [0][-]{appendix.B}{Dummy Load Heater Module Mechanical Design}{}% 37
-\BOOKMARK [0][-]{appendix.C}{MATLAB Code}{}% 38
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Methods}{}% 3
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 4
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 5
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 6
+\BOOKMARK [0][-]{chapter.7}{Future Work}{}% 7
+\BOOKMARK [0][-]{chapter*.5}{Appendices}{}% 8
+\BOOKMARK [0][-]{appendix.A}{The TIF Cooling System}{}% 9
+\BOOKMARK [0][-]{appendix.B}{Dummy Load Heater Module Mechanical Design}{}% 10
+\BOOKMARK [0][-]{appendix.C}{MATLAB Code}{}% 11
+\BOOKMARK [0][-]{appendix.D}{Test Log}{}% 12
